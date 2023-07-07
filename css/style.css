@@ -5,6 +5,8 @@
     --color-red: #EF3D38;
     --color-light-grey: #ACC7CD;
     --color-dark-grey: #3E595F;
+    --color-red-shadow: rgba(239,61,56,0.3);
+    --color-green-modalback: rgba(81,184,81,0.8);
 }
 
 @font-face {
@@ -74,7 +76,7 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    padding: 30px 30px 0 30px;
+    padding: 30px 100px 0 100px;
     font-family: CRRegular4;
     color: var(--color-dark-grey);
 }
@@ -273,7 +275,7 @@ body {
     justify-content: space-between;
     align-items: center;
     margin: 39px 0 0 0;
-    gap: 15px;
+    gap: 20px;
 }
 .container-nav {
     display: flex;
@@ -324,6 +326,9 @@ body {
     text-transform: uppercase;
     background-color: var(--color-red);
     border-radius: 45px;
+    -webkit-box-shadow: 0px 10px 20px 0px var(--color-red-shadow);
+    -moz-box-shadow: 0px 10px 20px 0px var(--color-red-shadow);
+    box-shadow: 0px 10px 20px 0px var(--color-red-shadow);
     cursor: pointer;
     transition: 200ms;
     position: relative;
@@ -369,7 +374,6 @@ body {
     max-width: 830px;
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
     gap: 15px;
 }
 .footer__space {
@@ -530,6 +534,44 @@ body {
     width: 225px;
 }
 /**************************************/
+.modal-wrapper {
+    position: fixed;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: var(--color-green-modalback);
+}
+.modal-wrapper.active {
+    display: flex;
+}
+.modal {
+    width: 660px;
+    min-height: 300px;
+    padding: 44px 23px 31px 23px;
+    background-color: #FFFFFF;
+    border-radius: 30px;
+    position: relative;
+}
+.modal__close-button {
+    position: absolute;
+    right: 18px;
+    top: 17px;
+    cursor: pointer;
+}
+/**************************************/
+@media screen and (max-width: 1440px) {
+  .wrapper {
+    padding: 30px 50px 0 50px;
+  }
+  .footer__flex {
+    flex-wrap: wrap;
+  }
+}
 @media screen and (max-width: 1250px) {
     .header__basket {
         font-size: 0px;
@@ -539,6 +581,9 @@ body {
         background-image: url(../images/basket.svg);
         background-position: center;
         background-repeat: no-repeat;
+        -webkit-box-shadow: 0px 0px 0px 0px #FFFFFF;
+        -moz-box-shadow: 0px 0px 0px 0px #FFFFFF;
+        box-shadow: 0px 0px 0px 0px #FFFFFF;
     }
     .header__basket-amount {
         position: absolute;
@@ -570,6 +615,9 @@ body {
 }
 
 @media screen and (max-width: 1070px) {
+    .wrapper {
+        padding: 30px 30px 0 30px;
+      }
     .footer__flex {
         width: 226px;
     }
