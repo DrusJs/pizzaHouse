@@ -26,18 +26,30 @@
                 с 10 до 23 ч.
               </div>
             </div>
-            <div class="container-info__location">
-              Железнодорожный
+            <div class="container-info__location" id="location">
+              <span id="location-select-value">Железнодорожный</span>
+              <ul class="location-select" id="location-select">
+                <li class="location-select__list">Железнодорожный</li>
+                <li class="location-select__list">Балашиха</li>
+                <li class="location-select__list">Москва</li>
+                <li class="location-select__list">Истра</li>
+                <li class="location-select__list">Химки</li>
+                <li class="location-select__list">Жуковский</li>
+                <li class="location-select__list">Дзержинский</li>
+                <li class="location-select__list">Долгопрудный</li>
+                <li class="location-select__list">Люберцы</li>
+                <li class="location-select__list">Некрасовка</li>
+              </ul>
             </div>
             <a class="container-info__vk-link" href="https://vk.com/">
               <svg class="container-info__vk" width="27" height="17" viewBox="0 0 27 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M14.9161 17C5.47552 17 0.188811 10.5778 0 0H4.72028C4.90909 7.74444 8.30769 11.1444 10.951 11.7111V0H15.2937V6.8C17.9371 6.42222 20.7692 3.4 21.7133 0H26.0559C25.3007 4.15556 22.2797 7.17778 20.014 8.5C22.2797 9.44444 25.6783 12.2778 27 17H22.0909C21.3357 13.7889 18.8811 11.3333 15.2937 10.9556V17H14.9161Z" fill="#E0E0E0"/>
               </svg>  
             </a>            
-            <div class="container-info__user">
+            <a class="container-info__user">
               <img src="images/userIcon.svg" alt="">
               Кабинет
-            </div>
+            </a>
             <div class="header__burger-menu" id="burger-button">
               <span class="burger-menu__bar"></span>
               <span class="burger-menu__bar"></span>
@@ -71,7 +83,15 @@
               <li class="container-nav__list">Закуски</li>
               <li class="container-nav__list">Хот-доги</li>
               <li class="container-nav__list share-red">Акции</li>
-              <li class="container-nav__list nav-select">Инфо</li>
+              <li class="container-nav__list nav-select">
+                Инфо
+                <ul class="nav-select__block" id="nav-select">
+                  <li class="nav-select__list">Магазины</li>
+                  <li class="nav-select__list">О нас</li>
+                  <li class="nav-select__list">Оплата и доставка</li>
+                  <li class="nav-select__list">Вакансии</li>
+                </ul>
+              </li>              
             </ul>
             <a class="header__basket" id="basket-button" href="#">
               Корзина

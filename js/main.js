@@ -1,7 +1,13 @@
 const burgerButton = document.getElementById("burger-button");
-const modalWrappers = document.querySelectorAll(".modal-wrapper");
 const popupMenu = document.getElementById("popup-menu");
+
+const modalWrappers = document.querySelectorAll(".modal-wrapper");
 const modalCloseButtons = document.querySelectorAll(".modal__close-button");
+
+const locationBlock = document.getElementById("location");
+const locationSelect = document.getElementById("location-select");
+const locationField = document.getElementById("location-select-value");
+const locationOptions = document.querySelectorAll(".location-select__list");
 
 burgerButton.addEventListener("click", ()=>{
     burgerButton.classList.toggle("active");
@@ -14,7 +20,9 @@ burgerButton.addEventListener("click", ()=>{
 
 modalWrappers.forEach(el =>{
     el.addEventListener("click", (e) => {
-        e.currentTarget.classList.remove("active");
+        if (e.target.classList.contains("modal-wrapper")){
+            e.currentTarget.classList.remove("active");
+        }
     });
 });
 
@@ -27,3 +35,24 @@ modalCloseButtons.forEach(el => {
 document.getElementById("basket-button").addEventListener("click", () => {
     document.getElementById("modal-register").classList.add("active");
 });
+
+locationBlock.addEventListener("mouseover", () => {
+    locationSelect.classList.add("active");
+});
+locationSelect.addEventListener("mouseover", () => {
+    locationSelect.classList.add("active");
+});
+locationBlock.addEventListener("mouseout", () => {
+    locationSelect.classList.remove("active");
+});
+locationSelect.addEventListener("mouseout", () => {
+    locationSelect.classList.remove("active");
+});
+locationOptions.forEach(el => {
+   el.addEventListener("click", (e) => {
+        locationField.innerHTML = e.currentTarget.innerHTML;
+        locationSelect.classList.remove("active");
+   });
+});
+
+
