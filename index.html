@@ -12,8 +12,9 @@
   <body>
     <div class="wrapper">
       <header class="header">
-        <a class="header__logo" href="/">
-          <img src="images/logoPizzaHouse.svg" alt="ДОМ ПИЦЦЫ">
+        <a class="header__logo" href="/pizzaHouse/">
+          <img class="header__logo-desc" src="images/logoPizzaHouse.svg" alt="ДОМ ПИЦЦЫ">
+          <img class="header__logo-mobile" src="images/logoPizzaHouseMobile.svg" alt="ДОМ ПИЦЦЫ">
         </a>
         <div class="header__container">
           <div class="header__container-info">
@@ -27,12 +28,19 @@
             <div class="container-info__location">
               Железнодорожный
             </div>
-            <svg class="container-info__vk" width="27" height="17" viewBox="0 0 27 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M14.9161 17C5.47552 17 0.188811 10.5778 0 0H4.72028C4.90909 7.74444 8.30769 11.1444 10.951 11.7111V0H15.2937V6.8C17.9371 6.42222 20.7692 3.4 21.7133 0H26.0559C25.3007 4.15556 22.2797 7.17778 20.014 8.5C22.2797 9.44444 25.6783 12.2778 27 17H22.0909C21.3357 13.7889 18.8811 11.3333 15.2937 10.9556V17H14.9161Z" fill="#E0E0E0"/>
-            </svg>              
+            <a class="container-info__vk-link" href="https://vk.com/">
+              <svg class="container-info__vk" width="27" height="17" viewBox="0 0 27 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.9161 17C5.47552 17 0.188811 10.5778 0 0H4.72028C4.90909 7.74444 8.30769 11.1444 10.951 11.7111V0H15.2937V6.8C17.9371 6.42222 20.7692 3.4 21.7133 0H26.0559C25.3007 4.15556 22.2797 7.17778 20.014 8.5C22.2797 9.44444 25.6783 12.2778 27 17H22.0909C21.3357 13.7889 18.8811 11.3333 15.2937 10.9556V17H14.9161Z" fill="#E0E0E0"/>
+              </svg>  
+            </a>            
             <div class="container-info__user">
               <img src="images/userIcon.svg" alt="">
               Кабинет
+            </div>
+            <div class="header__burger-menu" id="burger-button">
+              <span class="burger-menu__bar"></span>
+              <span class="burger-menu__bar"></span>
+              <span class="burger-menu__bar"></span>
             </div>
           </div>
           <div class="header__container-navmenu">
@@ -45,15 +53,14 @@
               <li class="container-nav__list share-red">Акции</li>
               <li class="container-nav__list">Инфо</li>
             </ul>
-            <button class="header__basket">
+            <a class="header__basket" href="#">
               Корзина
               <span class="header__basket-amount">2</span>
-            </button>
+            </a>
           </div>
         </div>
       </header>
       <main class="main">
-
       </main>
       <footer class="footer">
         <div class="footer__container">
