@@ -224,11 +224,90 @@ body {
 .footer {
     max-width: 1719px;
     width: 100%;
-    height: 321px;
+    min-height: 321px;
     background-color: var(--color-green);
     color: #FFFFFF;
     border-radius: 50px;
     position: relative;
+}
+.footer__container {
+    width: 100%;
+    margin: 48px 0;
+    display: flex;
+}
+.footer__flex {
+    max-width: 830px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.footer__space {
+    min-width: 355px;
+    margin-right: 50px;
+}
+.footer__vk {
+    min-width: 355px;
+    height: 1px;
+    display: block;
+    padding: 0 55px;
+    margin-left: 50px;
+}
+.footer__vk svg path {
+    transition: 200ms;
+}
+.footer__vk svg:hover path {
+    fill: var(--color-yellow);
+}
+.footer__phone-time {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 226px;
+}
+.footer__worktime {
+    font-size: 14px;
+    opacity: 0.5;
+    text-transform: uppercase;
+}
+.footer__phone {
+    font-size: 31px;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: 200ms;
+}
+.footer__phone:hover {
+    color: var(--color-yellow);
+}
+.footer__delivery {
+    font-family: CRRegular5;
+    font-size: 16px;
+}
+.footer__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 62px;
+    margin: 0 auto 0 auto;
+}
+.footer__info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.footer__menu-list-header {
+    font-size: 14px;
+    opacity: 0.5;
+    text-transform: uppercase;
+}
+.footer__menu-list {
+    font-size: 14px;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: 200ms;
+}
+.footer__menu-list:hover {
+    color:var(--color-yellow);
 }
 .footer__top-whitespace {
     width: 355px;
@@ -237,6 +316,8 @@ body {
     border-radius: 0 0 50px 0;
     background-color: #FFFFFF;
     z-index: 3;
+    top: 0;
+    left: 0;
     background-image: url(../images/logoPizzaHouseMobile.svg);
     background-repeat: no-repeat;
     background-position: center center;
@@ -270,7 +351,13 @@ body {
 .footer__bottom-whitespace {
     width: 355px;
     height: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
     position: absolute;
+    padding-bottom: 5px;
+    gap: 10px;
     right: 0;
     bottom: 0;
     border-radius: 50px 0 0 0;
@@ -302,4 +389,22 @@ body {
     -moz-box-shadow: 10px 10px 0px 8px #FFFFFF;
     box-shadow: 10px 10px 0px 8px #FFFFFF;
 }
+
+.footer__privacy {
+    font-family: CRregular5;
+    font-size: 16px;
+    color: var(--color-green);
+}
+
+.footer__date {
+    font-family: CRregular5;
+    font-size: 16px;
+    color: var(--color-dark-grey);
+    width: 225px;
+}
 /**************************************/
+@media screen and (max-width: 1173px) {
+    .footer__menu {
+        margin: 0 auto 0 0;
+    }
+}
