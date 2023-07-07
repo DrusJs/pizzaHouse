@@ -202,6 +202,72 @@ body {
     transform: translateY(-8px) rotate(-45deg);
     background-color: var(--color-red);
 }
+.popup-menu {
+    position: fixed;
+    top: 60px;
+    right: 100%;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transition: 300ms;
+    background-color: #FFFFFF;
+    border-top: 1px solid var(--color-light-grey);
+}
+.popup-menu.active {
+    right: 0;
+}
+.popup-menu__time {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-family: CRRegular5;
+    font-size: 16px;
+    cursor: default;
+    margin: 8px 30px;
+}
+.popup-menu__container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+    overflow-x: hidden;
+    background-color: #FFFFFF;
+}
+.popup-menu__list {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-green);
+    border: 1px solid var(--color-light-grey);
+    font-size: 26px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+.popup-menu__list.red {
+    background-color: var(--color-red);
+}
+.popup-menu__list.dark {
+    background-color: var(--color-dark-grey);
+}
+.popup-menu__list.little {
+    font-size: 20px;
+    font-family: CRRegular5;
+}
+.popup-menu__list.noborder {
+    border-bottom: 0;
+}
+.popup-menu__list:hover {
+    background-color: var(--color-light-grey);
+    color: var(--color-dark-grey);
+}
 .header__container-navmenu {
     display: flex;
     justify-content: space-between;
@@ -221,6 +287,19 @@ body {
     transition: 200ms;
     white-space: nowrap;
 }
+.nav-select {
+    position: relative;
+}
+.nav-select::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    right: -20px;
+    width: 15px;
+    height: 22px;
+    background-image: url(../images/darkArrSelect.svg);
+    background-repeat: no-repeat;
+}
 .share-red {
     color: var(--color-red);
 }
@@ -229,6 +308,9 @@ body {
 }
 .container-nav__list.share-red:hover {
     color: var(--color-red);
+}
+.container-nav__list.nav-select:hover {
+    color: var(--color-dark-grey);
 }
 .header__basket {
     display: flex;
@@ -361,7 +443,6 @@ body {
     position: absolute;
     border-radius: 0 0 50px 0;
     background-color: #FFFFFF;
-    z-index: 3;
     top: 0;
     left: 0;
     background-image: url(../images/logoPizzaHouseMobile.svg);
