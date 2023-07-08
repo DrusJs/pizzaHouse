@@ -20,7 +20,7 @@
         <div class="header__container">
           <div class="header__container-info">
             <div class="container-info-block">
-              <div class="container-info__phone">8 495 226-33-22</div>
+              <a class="container-info__phone">8 495 226-33-22</a>
               <div class="container-info__time">
                 <img src="images/headerTimeIcon.svg" alt="">
                 с 10 до 23 ч.
@@ -41,7 +41,7 @@
                 <li class="location-select__list">Некрасовка</li>
               </ul>
             </div>
-            <a class="container-info__vk-link" href="https://vk.com/">
+            <a class="container-info__vk-link" href="#">
               <svg class="container-info__vk" width="27" height="17" viewBox="0 0 27 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M14.9161 17C5.47552 17 0.188811 10.5778 0 0H4.72028C4.90909 7.74444 8.30769 11.1444 10.951 11.7111V0H15.2937V6.8C17.9371 6.42222 20.7692 3.4 21.7133 0H26.0559C25.3007 4.15556 22.2797 7.17778 20.014 8.5C22.2797 9.44444 25.6783 12.2778 27 17H22.0909C21.3357 13.7889 18.8811 11.3333 15.2937 10.9556V17H14.9161Z" fill="#E0E0E0"/>
               </svg>  
@@ -182,7 +182,7 @@
                           <button class="card-pizza__select_btn">тонкое</button>
                       </div>
                   </form>
-                  <button class="card-pizza_cart-btn">790</button>
+                  <button class="card-pizza_cart-btn">790 &#8381;</button>
               </div>
             </div>
             <div class="card-pizza">
@@ -204,7 +204,7 @@
                           <button class="card-pizza__select_btn">тонкое</button>
                       </div>
                   </form>
-                  <button class="card-pizza_cart-btn">790</button>
+                  <button class="card-pizza_cart-btn">790 &#8381;</button>
               </div>
             </div>
             <div class="card-pizza">
@@ -226,7 +226,7 @@
                           <button class="card-pizza__select_btn">тонкое</button>
                       </div>
                   </form>
-                  <button class="card-pizza_cart-btn">790</button>
+                  <button class="card-pizza_cart-btn">790 &#8381;</button>
               </div>
             </div>
             <div class="pagination__arrow-next">
@@ -237,7 +237,7 @@
           </div>
         </div>
         <div class="menu__container">
-          <h2 class="menu__header">Пиццы</h2>
+          <h2 class="menu__header">Пиццы</h2><!--pzz-->
           <ul class="menu__filter">
             <li class="menu__filter-list active">Все</li>
             <li class="menu__filter-list">Мясные</li>
@@ -254,14 +254,14 @@
               <p class="greencard__title">Пицца из половинок</p>
               <p class="greencard__desc">Попробуй больше вкусов
                   за 1 заказ</p>
-              <button class="greencard_btn">Собрать</button>
+              <button class="greencard_btn" id="cnstr-button">Собрать</button>
             </div>
             <div class="card-pizza">
               <img class="card-pizza__img" src="images/pizzaCard.png" alt="pizza">
               <div class="card-pizza__top-circle"></div>
               <div class="card-pizza__top-circle"></div>
               <div class="card-pizza__container">
-                  <p class="card-title">Креветка бекон</p>
+                  <p class="card-title">Датская</p>
                   <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>  
                   <form action="" class="card-pizza__form">
                       <div class="card-pizza__form-row">
@@ -275,7 +275,29 @@
                           <button class="card-pizza__select_btn">тонкое</button>
                       </div>
                   </form>
-                  <button class="card-pizza_cart-btn">790</button>
+                  <button class="card-pizza_cart-btn">790 &#8381;</button>
+              </div>
+            </div>
+            <div class="card-pizza">
+              <img class="card-pizza__img" src="images/pizzaCard.png" alt="pizza">
+              <div class="card-pizza__top-circle"></div>
+              <div class="card-pizza__top-circle"></div>
+              <div class="card-pizza__container">
+                  <p class="card-title">Чизбургер</p>
+                  <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>  
+                  <form action="" class="card-pizza__form">
+                      <div class="card-pizza__form-row">
+                          <input type="radio" id="card-pizza__radio-one" name="select_size">
+                          <label for="card-pizza__radio-one" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><button class="card-pizza__btn">+ ингредиенты</button>
+                      </div>
+                      <div class="card-pizza__form-row">
+                          <input type="radio" id="card-pizza__radio-two" name="select_size">
+                          <label for="card-pizza__radio-two" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
+                          <button class="card-pizza__focus_btn">пышное</button>
+                          <button class="card-pizza__select_btn">тонкое</button>
+                      </div>
+                  </form>
+                  <button class="card-pizza_cart-btn">790 &#8381;</button>
               </div>
             </div>
             <div class="card-pizza">
@@ -297,7 +319,7 @@
                           <button class="card-pizza__select_btn">тонкое</button>
                       </div>
                   </form>
-                  <button class="card-pizza_cart-btn">790</button>
+                  <button class="card-pizza_cart-btn">790 &#8381;</button>
               </div>
             </div>
             <div class="card-pizza">
@@ -305,7 +327,7 @@
               <div class="card-pizza__top-circle"></div>
               <div class="card-pizza__top-circle"></div>
               <div class="card-pizza__container">
-                  <p class="card-title">Креветка бекон</p>
+                  <p class="card-title">Двойная пепперони</p>
                   <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>  
                   <form action="" class="card-pizza__form">
                       <div class="card-pizza__form-row">
@@ -319,7 +341,7 @@
                           <button class="card-pizza__select_btn">тонкое</button>
                       </div>
                   </form>
-                  <button class="card-pizza_cart-btn">790</button>
+                  <button class="card-pizza_cart-btn">790 &#8381;</button>
               </div>
             </div>
             <div class="card-pizza">
@@ -327,7 +349,7 @@
               <div class="card-pizza__top-circle"></div>
               <div class="card-pizza__top-circle"></div>
               <div class="card-pizza__container">
-                  <p class="card-title">Креветка бекон</p>
+                  <p class="card-title">Мюнхенская</p>
                   <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>  
                   <form action="" class="card-pizza__form">
                       <div class="card-pizza__form-row">
@@ -341,7 +363,7 @@
                           <button class="card-pizza__select_btn">тонкое</button>
                       </div>
                   </form>
-                  <button class="card-pizza_cart-btn">790</button>
+                  <button class="card-pizza_cart-btn">790 &#8381;</button>
               </div>
             </div>
             <div class="card-pizza">
@@ -349,7 +371,7 @@
               <div class="card-pizza__top-circle"></div>
               <div class="card-pizza__top-circle"></div>
               <div class="card-pizza__container">
-                  <p class="card-title">Креветка бекон</p>
+                  <p class="card-title">Диабло</p>
                   <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>  
                   <form action="" class="card-pizza__form">
                       <div class="card-pizza__form-row">
@@ -363,7 +385,7 @@
                           <button class="card-pizza__select_btn">тонкое</button>
                       </div>
                   </form>
-                  <button class="card-pizza_cart-btn">790</button>
+                  <button class="card-pizza_cart-btn">790 &#8381;</button>
               </div>
             </div>
             <div class="card-pizza">
@@ -371,7 +393,7 @@
               <div class="card-pizza__top-circle"></div>
               <div class="card-pizza__top-circle"></div>
               <div class="card-pizza__container">
-                  <p class="card-title">Креветка бекон</p>
+                  <p class="card-title">Фирменная</p>
                   <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>  
                   <form action="" class="card-pizza__form">
                       <div class="card-pizza__form-row">
@@ -385,7 +407,7 @@
                           <button class="card-pizza__select_btn">тонкое</button>
                       </div>
                   </form>
-                  <button class="card-pizza_cart-btn">790</button>
+                  <button class="card-pizza_cart-btn">790 &#8381;</button>
               </div>
             </div>
             <div class="card-pizza">
@@ -393,7 +415,7 @@
               <div class="card-pizza__top-circle"></div>
               <div class="card-pizza__top-circle"></div>
               <div class="card-pizza__container">
-                  <p class="card-title">Креветка бекон</p>
+                  <p class="card-title">Бутчер</p>
                   <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>  
                   <form action="" class="card-pizza__form">
                       <div class="card-pizza__form-row">
@@ -407,29 +429,7 @@
                           <button class="card-pizza__select_btn">тонкое</button>
                       </div>
                   </form>
-                  <button class="card-pizza_cart-btn">790</button>
-              </div>
-            </div>
-            <div class="card-pizza">
-              <img class="card-pizza__img" src="images/pizzaCard.png" alt="pizza">
-              <div class="card-pizza__top-circle"></div>
-              <div class="card-pizza__top-circle"></div>
-              <div class="card-pizza__container">
-                  <p class="card-title">Креветка бекон</p>
-                  <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>  
-                  <form action="" class="card-pizza__form">
-                      <div class="card-pizza__form-row">
-                          <input type="radio" id="card-pizza__radio-one" name="select_size">
-                          <label for="card-pizza__radio-one" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><button class="card-pizza__btn">+ ингредиенты</button>
-                      </div>
-                      <div class="card-pizza__form-row">
-                          <input type="radio" id="card-pizza__radio-two" name="select_size">
-                          <label for="card-pizza__radio-two" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
-                          <button class="card-pizza__focus_btn">пышное</button>
-                          <button class="card-pizza__select_btn">тонкое</button>
-                      </div>
-                  </form>
-                  <button class="card-pizza_cart-btn">790</button>
+                  <button class="card-pizza_cart-btn">790 &#8381;</button>
               </div>
             </div>
                         <div class="card-pizza">
@@ -437,7 +437,7 @@
               <div class="card-pizza__top-circle"></div>
               <div class="card-pizza__top-circle"></div>
               <div class="card-pizza__container">
-                  <p class="card-title">Креветка бекон</p>
+                  <p class="card-title">Греческая</p>
                   <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>  
                   <form action="" class="card-pizza__form">
                       <div class="card-pizza__form-row">
@@ -451,7 +451,7 @@
                           <button class="card-pizza__select_btn">тонкое</button>
                       </div>
                   </form>
-                  <button class="card-pizza_cart-btn">790</button>
+                  <button class="card-pizza_cart-btn">790 &#8381;</button>
               </div>
             </div>
             <div class="card-pizza">
@@ -459,7 +459,7 @@
               <div class="card-pizza__top-circle"></div>
               <div class="card-pizza__top-circle"></div>
               <div class="card-pizza__container">
-                  <p class="card-title">Креветка бекон</p>
+                  <p class="card-title">Баварская</p>
                   <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>  
                   <form action="" class="card-pizza__form">
                       <div class="card-pizza__form-row">
@@ -473,7 +473,7 @@
                           <button class="card-pizza__select_btn">тонкое</button>
                       </div>
                   </form>
-                  <button class="card-pizza_cart-btn">790</button>
+                  <button class="card-pizza_cart-btn">790 &#8381;</button>
               </div>
             </div>
             <div class="card-pizza">
@@ -481,7 +481,7 @@
               <div class="card-pizza__top-circle"></div>
               <div class="card-pizza__top-circle"></div>
               <div class="card-pizza__container">
-                  <p class="card-title">Креветка бекон</p>
+                  <p class="card-title">4 сезона</p>
                   <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>  
                   <form action="" class="card-pizza__form">
                       <div class="card-pizza__form-row">
@@ -495,7 +495,7 @@
                           <button class="card-pizza__select_btn">тонкое</button>
                       </div>
                   </form>
-                  <button class="card-pizza_cart-btn">790</button>
+                  <button class="card-pizza_cart-btn">790 &#8381;</button>
               </div>
             </div>
             <div class="card-pizza">
@@ -503,7 +503,7 @@
               <div class="card-pizza__top-circle"></div>
               <div class="card-pizza__top-circle"></div>
               <div class="card-pizza__container">
-                  <p class="card-title">Креветка бекон</p>
+                  <p class="card-title">Маррргарита</p>
                   <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>  
                   <form action="" class="card-pizza__form">
                       <div class="card-pizza__form-row">
@@ -517,7 +517,7 @@
                           <button class="card-pizza__select_btn">тонкое</button>
                       </div>
                   </form>
-                  <button class="card-pizza_cart-btn">790</button>
+                  <button class="card-pizza_cart-btn">790 &#8381;</button>
               </div>
             </div>
             <div class="card-pizza">
@@ -525,7 +525,7 @@
               <div class="card-pizza__top-circle"></div>
               <div class="card-pizza__top-circle"></div>
               <div class="card-pizza__container">
-                  <p class="card-title">Креветка бекон</p>
+                  <p class="card-title">Куррица/грибы</p>
                   <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>  
                   <form action="" class="card-pizza__form">
                       <div class="card-pizza__form-row">
@@ -539,7 +539,7 @@
                           <button class="card-pizza__select_btn">тонкое</button>
                       </div>
                   </form>
-                  <button class="card-pizza_cart-btn">790</button>
+                  <button class="card-pizza_cart-btn">790 &#8381;</button>
               </div>
             </div>
             <div class="card-pizza">
@@ -547,7 +547,7 @@
               <div class="card-pizza__top-circle"></div>
               <div class="card-pizza__top-circle"></div>
               <div class="card-pizza__container">
-                  <p class="card-title">Креветка бекон</p>
+                  <p class="card-title">Закрытая</p>
                   <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>  
                   <form action="" class="card-pizza__form">
                       <div class="card-pizza__form-row">
@@ -561,7 +561,7 @@
                           <button class="card-pizza__select_btn">тонкое</button>
                       </div>
                   </form>
-                  <button class="card-pizza_cart-btn">790</button>
+                  <button class="card-pizza_cart-btn">790 &#8381;</button>
               </div>
             </div>
             <div class="card-pizza">
@@ -569,7 +569,7 @@
               <div class="card-pizza__top-circle"></div>
               <div class="card-pizza__top-circle"></div>
               <div class="card-pizza__container">
-                  <p class="card-title">Креветка бекон</p>
+                  <p class="card-title">Цезарь</p>
                   <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>  
                   <form action="" class="card-pizza__form">
                       <div class="card-pizza__form-row">
@@ -583,7 +583,7 @@
                           <button class="card-pizza__select_btn">тонкое</button>
                       </div>
                   </form>
-                  <button class="card-pizza_cart-btn">790</button>
+                  <button class="card-pizza_cart-btn">790 &#8381;</button>
               </div>
             </div>
             <div class="card-pizza">
@@ -591,7 +591,7 @@
               <div class="card-pizza__top-circle"></div>
               <div class="card-pizza__top-circle"></div>
               <div class="card-pizza__container">
-                  <p class="card-title">Креветка бекон</p>
+                  <p class="card-title">Ранч</p>
                   <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>  
                   <form action="" class="card-pizza__form">
                       <div class="card-pizza__form-row">
@@ -605,7 +605,7 @@
                           <button class="card-pizza__select_btn">тонкое</button>
                       </div>
                   </form>
-                  <button class="card-pizza_cart-btn">790</button>
+                  <button class="card-pizza_cart-btn">790 &#8381;</button>
               </div>
             </div>
             <div class="card-pizza">
@@ -613,7 +613,7 @@
               <div class="card-pizza__top-circle"></div>
               <div class="card-pizza__top-circle"></div>
               <div class="card-pizza__container">
-                  <p class="card-title">Креветка бекон</p>
+                  <p class="card-title">Цыпленок Песто</p>
                   <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>  
                   <form action="" class="card-pizza__form">
                       <div class="card-pizza__form-row">
@@ -627,7 +627,7 @@
                           <button class="card-pizza__select_btn">тонкое</button>
                       </div>
                   </form>
-                  <button class="card-pizza_cart-btn">790</button>
+                  <button class="card-pizza_cart-btn">790 &#8381;</button>
               </div>
             </div>
             <div class="card-pizza">
@@ -635,7 +635,7 @@
               <div class="card-pizza__top-circle"></div>
               <div class="card-pizza__top-circle"></div>
               <div class="card-pizza__container">
-                  <p class="card-title">Креветка бекон</p>
+                  <p class="card-title">Куриная BBQ</p>
                   <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>  
                   <form action="" class="card-pizza__form">
                       <div class="card-pizza__form-row">
@@ -649,7 +649,139 @@
                           <button class="card-pizza__select_btn">тонкое</button>
                       </div>
                   </form>
-                  <button class="card-pizza_cart-btn">790</button>
+                  <button class="card-pizza_cart-btn">790 &#8381;</button>
+              </div>
+            </div>
+            <div class="card-pizza">
+              <img class="card-pizza__img" src="images/pizzaCard.png" alt="pizza">
+              <div class="card-pizza__top-circle"></div>
+              <div class="card-pizza__top-circle"></div>
+              <div class="card-pizza__container">
+                  <p class="card-title">4 сыра</p>
+                  <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>  
+                  <form action="" class="card-pizza__form">
+                      <div class="card-pizza__form-row">
+                          <input type="radio" id="card-pizza__radio-one" name="select_size">
+                          <label for="card-pizza__radio-one" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><button class="card-pizza__btn">+ ингредиенты</button>
+                      </div>
+                      <div class="card-pizza__form-row">
+                          <input type="radio" id="card-pizza__radio-two" name="select_size">
+                          <label for="card-pizza__radio-two" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
+                          <button class="card-pizza__focus_btn">пышное</button>
+                          <button class="card-pizza__select_btn">тонкое</button>
+                      </div>
+                  </form>
+                  <button class="card-pizza_cart-btn">790 &#8381;</button>
+              </div>
+            </div>
+            <div class="card-pizza">
+              <img class="card-pizza__img" src="images/pizzaCard.png" alt="pizza">
+              <div class="card-pizza__top-circle"></div>
+              <div class="card-pizza__top-circle"></div>
+              <div class="card-pizza__container">
+                  <p class="card-title">Карбонара</p>
+                  <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>  
+                  <form action="" class="card-pizza__form">
+                      <div class="card-pizza__form-row">
+                          <input type="radio" id="card-pizza__radio-one" name="select_size">
+                          <label for="card-pizza__radio-one" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><button class="card-pizza__btn">+ ингредиенты</button>
+                      </div>
+                      <div class="card-pizza__form-row">
+                          <input type="radio" id="card-pizza__radio-two" name="select_size">
+                          <label for="card-pizza__radio-two" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
+                          <button class="card-pizza__focus_btn">пышное</button>
+                          <button class="card-pizza__select_btn">тонкое</button>
+                      </div>
+                  </form>
+                  <button class="card-pizza_cart-btn">790 &#8381;</button>
+              </div>
+            </div>
+            <div class="card-pizza">
+              <img class="card-pizza__img" src="images/pizzaCard.png" alt="pizza">
+              <div class="card-pizza__top-circle"></div>
+              <div class="card-pizza__top-circle"></div>
+              <div class="card-pizza__container">
+                  <p class="card-title">Пепперони</p>
+                  <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>  
+                  <form action="" class="card-pizza__form">
+                      <div class="card-pizza__form-row">
+                          <input type="radio" id="card-pizza__radio-one" name="select_size">
+                          <label for="card-pizza__radio-one" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><button class="card-pizza__btn">+ ингредиенты</button>
+                      </div>
+                      <div class="card-pizza__form-row">
+                          <input type="radio" id="card-pizza__radio-two" name="select_size">
+                          <label for="card-pizza__radio-two" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
+                          <button class="card-pizza__focus_btn">пышное</button>
+                          <button class="card-pizza__select_btn">тонкое</button>
+                      </div>
+                  </form>
+                  <button class="card-pizza_cart-btn">790 &#8381;</button>
+              </div>
+            </div>
+            <div class="card-pizza">
+              <img class="card-pizza__img" src="images/pizzaCard.png" alt="pizza">
+              <div class="card-pizza__top-circle"></div>
+              <div class="card-pizza__top-circle"></div>
+              <div class="card-pizza__container">
+                  <p class="card-title">Мясная</p>
+                  <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>  
+                  <form action="" class="card-pizza__form">
+                      <div class="card-pizza__form-row">
+                          <input type="radio" id="card-pizza__radio-one" name="select_size">
+                          <label for="card-pizza__radio-one" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><button class="card-pizza__btn">+ ингредиенты</button>
+                      </div>
+                      <div class="card-pizza__form-row">
+                          <input type="radio" id="card-pizza__radio-two" name="select_size">
+                          <label for="card-pizza__radio-two" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
+                          <button class="card-pizza__focus_btn">пышное</button>
+                          <button class="card-pizza__select_btn">тонкое</button>
+                      </div>
+                  </form>
+                  <button class="card-pizza_cart-btn">790 &#8381;</button>
+              </div>
+            </div>
+            <div class="card-pizza">
+              <img class="card-pizza__img" src="images/pizzaCard.png" alt="pizza">
+              <div class="card-pizza__top-circle"></div>
+              <div class="card-pizza__top-circle"></div>
+              <div class="card-pizza__container">
+                  <p class="card-title">Ветчина/грибы</p>
+                  <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>  
+                  <form action="" class="card-pizza__form">
+                      <div class="card-pizza__form-row">
+                          <input type="radio" id="card-pizza__radio-one" name="select_size">
+                          <label for="card-pizza__radio-one" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><button class="card-pizza__btn">+ ингредиенты</button>
+                      </div>
+                      <div class="card-pizza__form-row">
+                          <input type="radio" id="card-pizza__radio-two" name="select_size">
+                          <label for="card-pizza__radio-two" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
+                          <button class="card-pizza__focus_btn">пышное</button>
+                          <button class="card-pizza__select_btn">тонкое</button>
+                      </div>
+                  </form>
+                  <button class="card-pizza_cart-btn">790 &#8381;</button>
+              </div>
+            </div>
+            <div class="card-pizza">
+              <img class="card-pizza__img" src="images/pizzaCard.png" alt="pizza">
+              <div class="card-pizza__top-circle"></div>
+              <div class="card-pizza__top-circle"></div>
+              <div class="card-pizza__container">
+                  <p class="card-title">Филадельфия</p>
+                  <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>  
+                  <form action="" class="card-pizza__form">
+                      <div class="card-pizza__form-row">
+                          <input type="radio" id="card-pizza__radio-one" name="select_size">
+                          <label for="card-pizza__radio-one" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><button class="card-pizza__btn">+ ингредиенты</button>
+                      </div>
+                      <div class="card-pizza__form-row">
+                          <input type="radio" id="card-pizza__radio-two" name="select_size">
+                          <label for="card-pizza__radio-two" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
+                          <button class="card-pizza__focus_btn">пышное</button>
+                          <button class="card-pizza__select_btn">тонкое</button>
+                      </div>
+                  </form>
+                  <button class="card-pizza_cart-btn">790 &#8381;</button>
               </div>
             </div>
           </div>
@@ -663,23 +795,23 @@
               <div class="item-card__container">
                   <p class="card-title item-card__title">Пита с индейкой</p>
                   <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>
-                  <button class="card-pizza_cart-btn item-card__btn">250</button>
+                  <button class="card-pizza_cart-btn item-card__btn">250 &#8381;</button>
               </div>
             </div>
             <div class="item-card">
               <img class="item-card__img" src="images/tortillaCard2.png" alt="">
               <div class="item-card__container">
-                  <p class="card-title item-card__title">Пита с индейкой</p>
+                  <p class="card-title item-card__title">Пита с курицей</p>
                   <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>
-                  <button class="card-pizza_cart-btn item-card__btn">250</button>
+                  <button class="card-pizza_cart-btn item-card__btn">250 &#8381;</button>
               </div>
             </div>
             <div class="item-card">
               <img class="item-card__img" src="images/tortillaCard3.png" alt="">
               <div class="item-card__container">
-                  <p class="card-title item-card__title">Пита с индейкой</p>
+                  <p class="card-title item-card__title">Пита с рваной свининой</p>
                   <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>
-                  <button class="card-pizza_cart-btn item-card__btn">250</button>
+                  <button class="card-pizza_cart-btn item-card__btn">250 &#8381;</button>
               </div>
             </div>
           </div>
@@ -691,49 +823,49 @@
             <div class="item-card">
               <img class="item-card__img" src="images/snacksCard1.png" alt="">
               <div class="item-card__container">
-                  <p class="card-title item-card__title">Пита с индейкой</p>
+                  <p class="card-title item-card__title">Сливочный цыпленок</p>
                   <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>
-                  <button class="card-pizza_cart-btn item-card__btn">250</button>
+                  <button class="card-pizza_cart-btn item-card__btn">250 &#8381;</button>
               </div>
             </div>
             <div class="item-card">
               <img class="item-card__img" src="images/snacksCard2.png" alt="">
               <div class="item-card__container">
-                  <p class="card-title item-card__title">Пита с индейкой</p>
+                  <p class="card-title item-card__title">Сливочный цыпленок</p>
                   <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>
-                  <button class="card-pizza_cart-btn item-card__btn">250</button>
+                  <button class="card-pizza_cart-btn item-card__btn">250 &#8381;</button>
               </div>
             </div>
             <div class="item-card">
               <img class="item-card__img" src="images/snacksCard3.png" alt="">
               <div class="item-card__container">
-                  <p class="card-title item-card__title">Пита с индейкой</p>
+                  <p class="card-title item-card__title">Сливочный цыпленок</p>
                   <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>
-                  <button class="card-pizza_cart-btn item-card__btn">250</button>
+                  <button class="card-pizza_cart-btn item-card__btn">250 &#8381;</button>
               </div>
             </div>
             <div class="item-card">
               <img class="item-card__img" src="images/snacksCard4.png" alt="">
               <div class="item-card__container">
-                  <p class="card-title item-card__title">Пита с индейкой</p>
+                  <p class="card-title item-card__title">Сливочный цыпленок</p>
                   <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>
-                  <button class="card-pizza_cart-btn item-card__btn">250</button>
+                  <button class="card-pizza_cart-btn item-card__btn">250 &#8381;</button>
               </div>
             </div>
             <div class="item-card">
               <img class="item-card__img" src="images/snacksCard5.png" alt="">
               <div class="item-card__container">
-                  <p class="card-title item-card__title">Пита с индейкой</p>
+                  <p class="card-title item-card__title">Сливочный цыпленок</p>
                   <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>
-                  <button class="card-pizza_cart-btn item-card__btn">250</button>
+                  <button class="card-pizza_cart-btn item-card__btn">250 &#8381;</button>
               </div>
             </div>
             <div class="item-card">
               <img class="item-card__img" src="images/snacksCard6.png" alt="">
               <div class="item-card__container">
-                  <p class="card-title item-card__title">Пита с индейкой</p>
+                  <p class="card-title item-card__title">Сливочный цыпленок</p>
                   <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>
-                  <button class="card-pizza_cart-btn item-card__btn">250</button>
+                  <button class="card-pizza_cart-btn item-card__btn">250 &#8381;</button>
               </div>
             </div>
           </div>
@@ -743,11 +875,43 @@
           <div class="menu__main">
             <p class="menu__pharagraph empty"></p>
             <div class="item-card">
-              <img class="item-card__img" src="images/tortillaCard3.png" alt="">
+              <img class="item-card__img" src="" alt="">
               <div class="item-card__container">
                   <p class="card-title item-card__title">Сливочный цыпленок</p>
                   <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>
-                  <button class="card-pizza_cart-btn item-card__btn">250</button>
+                  <button class="card-pizza_cart-btn item-card__btn">250 &#8381;</button>
+              </div>
+            </div>
+            <div class="item-card">
+              <img class="item-card__img" src="" alt="">
+              <div class="item-card__container">
+                  <p class="card-title item-card__title">Сливочный цыпленок</p>
+                  <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>
+                  <button class="card-pizza_cart-btn item-card__btn">250 &#8381;</button>
+              </div>
+            </div>
+            <div class="item-card">
+              <img class="item-card__img" src="" alt="">
+              <div class="item-card__container">
+                  <p class="card-title item-card__title">Сливочный цыпленок</p>
+                  <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>
+                  <button class="card-pizza_cart-btn item-card__btn">250 &#8381;</button>
+              </div>
+            </div>
+            <div class="item-card">
+              <img class="item-card__img" src="" alt="">
+              <div class="item-card__container">
+                  <p class="card-title item-card__title">Сливочный цыпленок</p>
+                  <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>
+                  <button class="card-pizza_cart-btn item-card__btn">250 &#8381;</button>
+              </div>
+            </div>
+            <div class="item-card">
+              <img class="item-card__img" src="" alt="">
+              <div class="item-card__container">
+                  <p class="card-title item-card__title">Сливочный цыпленок</p>
+                  <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>
+                  <button class="card-pizza_cart-btn item-card__btn">250 &#8381;</button>
               </div>
             </div>
           </div>
@@ -799,7 +963,7 @@
               <li class="footer__menu-list">Акции и скидки</li>
             </ul>
           </div>
-          <a class="footer__vk" href="https://vk.com/">
+          <a class="footer__vk" href="#">
             <svg width="36" height="22" viewBox="0 0 36 22" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M19.8881 22C7.3007 22 0.251748 13.6889 0 0H6.29371C6.54545 10.0222 11.0769 14.4222 14.6014 15.1556V0H20.3916V8.8C23.9161 8.31111 27.6923 4.4 28.951 0H34.7413C33.7343 5.37778 29.7063 9.28889 26.6853 11C29.7063 12.2222 34.2378 15.8889 36 22H29.4545C28.4476 17.8444 25.1748 14.6667 20.3916 14.1778V22H19.8881Z" fill="white"/>
             </svg>

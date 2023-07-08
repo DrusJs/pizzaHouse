@@ -36,6 +36,10 @@ document.getElementById("basket-button").addEventListener("click", () => {
     document.getElementById("modal-register").classList.add("active");
 });
 
+document.getElementById("cnstr-button").addEventListener("click", () => {
+    document.getElementById("modal-constructor").classList.add("active");
+});
+
 // locationBlock.addEventListener("click", () => {
 //     locationSelect.classList.toggle("active");
 // });
@@ -58,4 +62,9 @@ locationOptions.forEach(el => {
    });
 });
 
-
+document.querySelectorAll(".menu__filter-list").forEach(el => {
+    el.addEventListener("click", (e) => {
+        document.querySelector(".menu__filter-list.active").classList.remove("active");
+        e.currentTarget.classList.add("active");
+    });
+});
