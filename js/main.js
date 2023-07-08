@@ -36,6 +36,9 @@ document.getElementById("basket-button").addEventListener("click", () => {
     document.getElementById("modal-register").classList.add("active");
 });
 
+// locationBlock.addEventListener("click", () => {
+//     locationSelect.classList.toggle("active");
+// });
 locationBlock.addEventListener("mouseover", () => {
     locationSelect.classList.add("active");
 });
