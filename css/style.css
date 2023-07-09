@@ -1062,6 +1062,7 @@ body.noscroll {
     align-items: center;
     justify-content: space-between;
     border-radius: 20px;
+    user-select: none;
 }
 .counter__inc {
     width: 20px;
@@ -1074,6 +1075,7 @@ body.noscroll {
     color: var(--color-green);
     background-color: #FFFFFF;
     cursor: pointer;
+    user-select: none;
 }
 .counter__inc:hover {
     background-color: var(--color-yellow);
@@ -1472,6 +1474,7 @@ body.noscroll {
 }
 
 .title-reg {
+    text-align: center;
     padding: 44px 0 5px 0;
 }
 
@@ -1504,6 +1507,9 @@ body.noscroll {
 
 .reg-label {
     width: 185px;
+    font-family: CRRegular4;
+    font-size: 23px;
+    color: var(--color-dark-grey); 
 }
 
 .input__text {
@@ -1702,6 +1708,84 @@ body.noscroll {
 .modal-acc__remind-pass {
     margin-top: -5px;
     margin-bottom: 29px;
+}
+.modal__ingredients {
+    font-family: CRRegular4;
+    font-size: 23px;
+    color: var(--color-dark-grey);
+    max-width: 660px;
+    padding: 0 0 41px 37px;
+    background-color: #ffffff;
+    border-radius: 30px;
+    gap: 38px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.ingredients__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px 22px;
+    justify-content: flex-start;
+}
+.ingredient {
+    width: 278px;
+    height: 50px;
+    display: flex;
+    gap: 10px;
+}
+.ingredient-flex {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.ingredient__name {
+    width: 210px;
+    font-size: 16px;
+    font-family: CRRegular4;
+}
+.ingredient__weight {
+    font-family: CRRegular5;
+    font-size: 11px;
+    line-height: 15px;
+}
+.ingredient__price {
+    font-size: 16px;
+    font-family: CRRegular4;
+}
+.counter.empty {
+    background-color: #FFFFFF;
+    color: var(--color-dark-grey);
+    border-top: 1px solid var(--color-light-grey);
+    border-bottom: 1px solid var(--color-light-grey);
+}
+.counter.empty .counter__inc {
+    border: 1px solid var(--color-light-grey);    
+    background-color: #FFFFFF;
+    color: var(--color-dark-grey);
+}
+.ingredient__buttons {
+    display: flex;
+    gap: 29px;
+    align-items: center;
+}
+.ingredient__buttons .submit-btn {
+    height: 45px;     
+    padding: 11px 23px;
+    font-size: 18px; 
+    color: #FFFFFF;
+    border-radius: 40px;
+    background: var(--green, #51B851);
+    box-shadow: 0px 10px 20px 0px rgba(81, 184, 81, 0.30);
+    cursor: pointer;
+}
+.reset-ingredients {
+    color: var(--color-dark-grey);
+    font-size: 14px;
+    border-bottom: 1px dotted var(--color-dark-grey);
+    cursor: pointer;
 }
 /**************************************/
 @media screen and (max-width: 1440px) {

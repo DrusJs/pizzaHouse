@@ -34,9 +34,9 @@ modalCloseButtons.forEach(el => {
 
 
 try{
-document.getElementById("cnstr-button").addEventListener("click", () => {
-    document.getElementById("modal-constructor").classList.add("active");
-});
+    document.getElementById("cnstr-button").addEventListener("click", () => {
+        document.getElementById("modal-constructor").classList.add("active");
+    });
 } catch {}
 
 // locationBlock.addEventListener("click", (e) => {
@@ -133,6 +133,34 @@ function setActionsCards() {
             if (e.target.classList.contains("card-pizza__btn")){
                 document.getElementById("modal-ingredients").classList.add("active");
             }
+        });
+    });
+    document.querySelectorAll(".counter__inc.plus").forEach(el => {
+        el.addEventListener("click", (e) => {
+            let value = e.currentTarget.previousElementSibling.innerHTML;
+            +value++;
+            e.currentTarget.previousElementSibling.innerHTML = value;
+            if (value == 1) {
+                e.currentTarget.parentElement.classList.remove("empty");
+            }
+        });
+    });
+    document.querySelectorAll(".counter__inc.minus").forEach(el => {
+        el.addEventListener("click", (e) => {
+            let value = e.currentTarget.nextElementSibling.innerHTML;
+            if (value == 0) {return;}
+            +value--;
+            e.currentTarget.nextElementSibling.innerHTML = value;
+            if (value < 1) {
+                e.currentTarget.parentElement.classList.add("empty");
+            }
+        });
+    });
+    document.querySelector(".reset-ingredients").addEventListener("click", () => {
+        document.querySelectorAll(".cntr__ingredient").forEach(el => {
+            el.classList.remove("empty");
+            el.classList.add("empty");
+            el.firstElementChild.nextElementSibling.innerHTML = 0;
         });
     });
 }
