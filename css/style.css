@@ -59,7 +59,10 @@
     border: 0;
     box-sizing: border-box;
 }
-a {
+a,
+a:hover,
+a:active,
+a:visited {
     text-decoration: none;
 }
 ul,
