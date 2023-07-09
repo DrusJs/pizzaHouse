@@ -2057,6 +2057,11 @@ body.noscroll {
     .modal {
         width: 340px;
     }
+    .partner-link {
+        width: 60px;
+        height: 53px;
+        background-image: url(../images/partnerLogoMob.svg);
+    }
 }
 
 @media screen and (max-width: 550px) {
