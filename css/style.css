@@ -71,6 +71,9 @@ html,
 body {
     height: 100%;
 }
+body.noscroll {
+	overflow: hidden;
+}
 .partner-link {
     width: 154px;
     height: 135px;
