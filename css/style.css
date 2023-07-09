@@ -197,6 +197,7 @@ body.noscroll {
     background: rgba(255, 255, 255, 0.0);
 }
 .location-select__list {
+    display: block;
     width: 180px;
     height: 30px;
     padding: 6px 0 0 11px;
