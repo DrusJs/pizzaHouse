@@ -180,7 +180,8 @@ body {
     overflow-y: visible;
     overflow-x: hidden;
     padding: 5px 0;
-    scrollbar-width: 0;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 .location-select.active {
     display: block;
@@ -430,6 +431,9 @@ body {
 .main {
     width: 100%;
     flex: 1 1 auto;
+    padding: 96px 0 0 0;
+}
+.main.high {
     padding: 35px 0 0 0;
 }
 .slider__container {
