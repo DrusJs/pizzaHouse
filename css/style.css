@@ -341,6 +341,7 @@ body.noscroll {
     cursor: pointer;
     transition: 200ms;
     white-space: nowrap;
+    color: var(--color-dark-grey);
 }
 .nav-select {
     position: relative;
