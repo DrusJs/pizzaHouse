@@ -26,19 +26,21 @@
                 с 10 до 23 ч.
               </div>
             </div>
-            <div class="container-info__location" id="location">
-              <span id="location-select-value">Железнодорожный</span>
-              <div class="location-select" id="location-select">
-                <a class="location-select__list">Железнодорожный</a>
-                <a class="location-select__list">Балашиха</a>
-                <a class="location-select__list">Москва</a>
-                <a class="location-select__list">Истра</a>
-                <a class="location-select__list">Химки</a>
-                <a class="location-select__list">Жуковский</a>
-                <a class="location-select__list">Дзержинский</a>
-                <a class="location-select__list">Долгопрудный</a>
-                <a class="location-select__list">Люберцы</a>
-                <a class="location-select__list">Некрасовка</a>
+            <div class="container-info__fix">
+              <div class="container-info__location" id="location">
+                <span id="location-select-value">Железнодорожный</span>
+                <div class="location-select" id="location-select">
+                  <a class="location-select__list">Железнодорожный</a>
+                  <a class="location-select__list">Балашиха</a>
+                  <a class="location-select__list">Москва</a>
+                  <a class="location-select__list">Истра</a>
+                  <a class="location-select__list">Химки</a>
+                  <a class="location-select__list">Жуковский</a>
+                  <a class="location-select__list">Дзержинский</a>
+                  <a class="location-select__list">Долгопрудный</a>
+                  <a class="location-select__list">Люберцы</a>
+                  <a class="location-select__list">Некрасовка</a>
+                </div>
               </div>
             </div>
             <a class="container-info__vk-link" href="#">
@@ -61,35 +63,35 @@
                 с 10 до 23 ч.
               </div>
               <ul class="popup-menu__container">
-                <a class="popup-menu__list noborder">Пиццы</a>
+                <a class="popup-menu__list noborder" href="/pizzaPita">Пиццы</a>
                 <a class="popup-menu__list noborder" href="/pizzaPita">Питы</a>
-                <a class="popup-menu__list noborder">Закуски</a>
-                <a class="popup-menu__list noborder">Супы</a>
-                <a class="popup-menu__list noborder">Напитки</a>
+                <a class="popup-menu__list noborder" href="/pizzaPita">Закуски</a>
+                <a class="popup-menu__list noborder" href="/pizzaPita">Супы</a>
+                <a class="popup-menu__list noborder" href="/pizzaPita">Напитки</a>
                 <a class="popup-menu__list red noborder">Акции</a>
                 <a class="popup-menu__list dark">Инфо</a>
-                <a class="popup-menu__list dark little">Магазины</a>
-                <a class="popup-menu__list dark little">О нас</a>
+                <a class="popup-menu__list dark little" href="/pizzaDelivery">Магазины</a>
+                <a class="popup-menu__list dark little" href="/pizzaDelivery">О нас</a>
                 <a class="popup-menu__list dark little" href="/pizzaDelivery">Оплата и доставка</a>
-                <a class="popup-menu__list dark little">Вакансии</a>
+                <a class="popup-menu__list dark little" href="/pizzaDelivery">Вакансии</a>
               </ul>
             </div>
           </div>
           <div class="header__container-navmenu">
             <ul class="container-nav">
-              <a class="container-nav__list">Пиццы</a>
-              <a class="container-nav__list">Сэндвичи</a>
+              <a class="container-nav__list" href="/pizzaPita">Пиццы</a>
+              <a class="container-nav__list" href="/pizzaPita">Сэндвичи</a>
               <a class="container-nav__list" href="/pizzaPita">Питы</a>
-              <a class="container-nav__list">Закуски</a>
-              <a class="container-nav__list">Хот-доги</a>
+              <a class="container-nav__list" href="/pizzaPita">Закуски</a>
+              <a class="container-nav__list" href="/pizzaPita">Хот-доги</a>
               <a class="container-nav__list share-red">Акции</a>
               <a class="container-nav__list nav-select">
                 Инфо
                 <ul class="nav-select__block" id="nav-select">
-                  <a class="nav-select__list">Магазины</a>
-                  <a class="nav-select__list">О нас</a>
+                  <a class="nav-select__list" href="/pizzaDelivery">Магазины</a>
+                  <a class="nav-select__list" href="/pizzaDelivery">О нас</a>
                   <a class="nav-select__list" href="/pizzaDelivery">Оплата и доставка</a>
-                  <a class="nav-select__list">Вакансии</a>
+                  <a class="nav-select__list" href="/pizzaDelivery">Вакансии</a>
                 </ul>
               </a>              
             </ul>
@@ -1195,9 +1197,9 @@
                   <input class="input__text" type="text" id="reg-name">
               </div>
 
-              <div class="modal-reg__row">
+              <div class="modal-reg__row phone">
                   <label class="reg-label" for="reg-number">Телефон *</label>
-                  <input class="input__text reg-input__number" type="text" value="+7 (___) ___-__-__" id="reg-number">
+                  <input class="input__text reg-input__number" type="text" placeholder="+7 (___) ___-__-__" id="reg-number" data-phone-pattern>
               </div>
 
               <div class="modal-reg__row">
@@ -1255,8 +1257,8 @@
               </div>
 
               <div class="modal-reg__row modal-reg-termofuse">
-                  <input class="checbox-termofuse" type="checkbox" id="reg-termofuse">
-                  <p class="modal__desc reg-desc">Соглашаюсь с <a class="modal__link reg-link">Условиями</a> обработки персональных данных</p>
+                  <input class="checkbox checbox-termofuse" type="checkbox" id="policy" checked>
+                  <label for="policy" class="modal__desc reg-desc">Соглашаюсь с условиями обработки персональных данных</label>
               </div>
 
               <div class="form__complete-block reg-complete-block">
@@ -1289,8 +1291,8 @@
               <p class="modal__desc modal-acc__remind-pass">Забыли пароль? Не беда! <a class="modal__link remind">Напомнить</a></p> 
 
               <div class="modal-reg__row modal-acc__remember">
-                  <input class="checbox-termofuse" type="checkbox" id="reg-termofuse">
-                  <p class="modal__desc reg-desc">Запомнить меня на этом сайте</p>
+                  <input class="checkbox checbox-termofuse" type="checkbox" id="remind-login">
+                  <label for="remind-login" class="modal__desc reg-desc">Запомнить меня на этом сайте</label>
               </div>
               
               <div class="form__complete-block acc__complete-block">

@@ -631,6 +631,7 @@ body.noscroll {
     align-items: center;
     gap: 50px;
     padding-top: 85px;
+    overflow-x: hidden;
 }
 .menu__pharagraph {
     width: 300px;
@@ -1839,6 +1840,7 @@ body.noscroll {
 }
 
 .modal-reg__row-adress {
+    margin-top: 20px;
     align-items: normal;
 }
 
@@ -1876,6 +1878,13 @@ body.noscroll {
     font-size: 20px;
     color: var(--color-dark-grey);
     opacity: 0.5;
+}
+
+.input__text.reg-input__number::placeholder {
+    font-family: CRRegular5;
+    font-size: 30px;
+    color: var(--color-dark-grey);
+    opacity: 1;
 }
 
 .modal-reg-termofuse {
@@ -2091,6 +2100,9 @@ body.noscroll {
   }
 }
 @media screen and (max-width: 1250px) {
+    .menu__main.start {
+        justify-content: center;
+      }
     .header__basket {
         font-size: 0px;
         width: 48px;
@@ -2159,8 +2171,29 @@ body.noscroll {
     .slide__preview {
         max-width: 420px;
     }
+    .menu__header {
+        font-size: 22px;
+        line-height: 28px;
+    }
     .menu__filter {
-        display: none;
+        margin-left: 0;
+        padding-top: 55px;
+        overflow-x: scroll;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        white-space: nowrap;
+        gap: 2px;
+    }
+    .menu__pharagraph {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    .menu__filter::-webkit-scrollbar { 
+        width: 0;
+        background: rgba(255, 255, 255, 0.0);
+    }
+    .menu__main {
+        padding-top: 40px;
     }
     .pagination__arrow-prev,
     .pagination__arrow-next {
@@ -2168,6 +2201,9 @@ body.noscroll {
     }
     .offers {
         padding: 0 20% 0 20%;
+    }
+    .footer {
+        margin-top: 100px;
     }
     .footer__flex {
         width: 226px;
@@ -2289,6 +2325,9 @@ body.noscroll {
         min-width: 105px;
         padding: 0;
     }
+    .footer {
+        margin-top: 60px;
+    }
     .footer__top-whitespace {
         width: 195px;
         height: 83px;        
@@ -2345,7 +2384,165 @@ body.noscroll {
     }
     .modal {
         width: 340px;
+        min-height: 200px;
     }
+    .reg-label__radio {
+        font-size: 14px;
+        margin-right: 10px;
+    }
+    
+    .reg-label {
+        font-size: 16px;
+        width: 310px;
+        padding-left: 10px;
+    }
+    .input-reg__house {
+        width: 91px;
+    }
+    .modal__title {
+        font-size: 22px;
+    }
+    .modal__desc, .modal__link {
+        font-size: 15px;
+    }     
+    .modal-reg {
+        max-width: 340px;
+        height: 1290px;
+    }
+    .modal-reg form, .modal__remind form, .modal__acc form {
+        max-width: 340px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .modal__acc {
+        height: 535px;
+    }
+    .modal__remind {
+        height: 395px;
+    }
+    
+    .modal-reg__row{ 
+        max-width: 340px;
+        gap: 10px;
+        flex-direction: column;
+    }
+    .modal-reg__row.phone{ 
+        gap: 0px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        margin-left: 14px;
+    }
+    .phone .reg-label{ 
+        min-width: 95px;
+    }
+    
+    .reg-number {
+        display: block;
+        margin-left: 84px;
+    }
+    
+    .input__text.reg-input__number {
+        font-size: 26px;
+        width: 250px;
+    }
+    
+    .input__text  {
+        width: 320px;
+    }
+    
+    .modal-reg__city {
+        margin-left: 15px;
+        gap: 10px;
+    }
+    
+    .modal-reg__row-city {
+        width: 268px;
+    }
+    
+    .modal-reg__row-adress {
+        align-items: flex-start;
+        margin-left: 15px;
+    }
+    
+    .modal-reg__row-adress p{
+        margin-top: 0px;
+    } 
+    .input-reg__street {
+        width: 310px;
+    }
+    .input-reg__house {
+        width: 110px;
+    }
+    .input-reg__door {
+        width: 170px;
+    }
+    
+    .input-reg__floor {
+        width: 110px;
+    }
+    
+    .input-reg__flat {
+        width: 170px;
+    }
+    
+    .modal-reg-termofuse {
+        flex-direction: row;
+        margin-left: 15px;
+        width: 290px;
+    }
+    .reg-complete-block {
+        margin-left: 10px;
+    }
+    .sumbit-btn {
+        margin-right: 5px;
+    }
+    .modal-acc__remind-pass {
+        margin-left: 0px;
+      }
+      .modal-acc__remember {
+        margin-left: -70px;
+      }
+      .acc__complete-block {
+        margin-left: 0px;
+      }
+      .remind-desc {
+        width: 304px;
+      }
+      .remind__complete-block {
+        margin-top: 25px;
+        margin-left: 0px;
+      }
+      .remind-modal__email {
+        text-align: left;
+        margin-right: 0px;
+        width: 300px;
+      }
+      .modal__ingredients {
+        padding: 0 0 31px 20px;
+        align-items: flex-start;
+        gap: 20px;
+      }
+      .ingredients__container {
+        padding-left: 30px;
+      }
+      .ingredient__buttons {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+      .modal__title {
+        width: 300px;
+        text-align: center;
+      }
+      .ingredient__buttons {
+        margin-top: 15px;
+      }
+      .delivery__pharagraph {
+        width: 100%;
+      }
     .partner-link {
         width: 60px;
         height: 53px;
