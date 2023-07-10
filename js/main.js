@@ -13,8 +13,10 @@ burgerButton.addEventListener("click", ()=>{
     burgerButton.classList.toggle("active");
     if (burgerButton.classList.contains("active")) {
         popupMenu.classList.add("active");
+        document.body.classList.add("noscroll");
     } else {
         popupMenu.classList.remove("active");
+        document.body.classList.remove("noscroll");
     }
 });
 
@@ -22,6 +24,7 @@ modalWrappers.forEach(el =>{
     el.addEventListener("click", (e) => {
         if (e.target.classList.contains("modal-wrapper")){
             e.currentTarget.classList.remove("active");
+            document.body.classList.remove("noscroll");
         }
     });
 });
@@ -29,6 +32,7 @@ modalWrappers.forEach(el =>{
 modalCloseButtons.forEach(el => {
     el.addEventListener("click", (e) => {
         e.currentTarget.parentElement.parentElement.classList.remove("active");
+        document.body.classList.remove("noscroll");
     });
 });
 
@@ -75,22 +79,27 @@ document.querySelectorAll(".menu__filter-list").forEach(el => {
 function setActionModal() {
     document.querySelector(".container-info__user").addEventListener("click", () => {
         document.getElementById("modal-login").classList.add("active");
+        document.body.classList.add("noscroll");
     });
     document.querySelector(".modal__link.login").addEventListener("click", () => {
         document.querySelector(".modal-wrapper.active").classList.remove("active");
         document.getElementById("modal-login").classList.add("active");
+        document.body.classList.add("noscroll");
     });
     document.querySelector(".modal__link.register").addEventListener("click", () => {
         document.querySelector(".modal-wrapper.active").classList.remove("active");
         document.getElementById("modal-register").classList.add("active");
+        document.body.classList.add("noscroll");
     });
     document.querySelector(".modal__link.remind").addEventListener("click", () => {
         document.querySelector(".modal-wrapper.active").classList.remove("active");
         document.getElementById("modal-remind").classList.add("active");
+        document.body.classList.add("noscroll");
     });
     document.querySelectorAll(".reset-btn").forEach(el => {
         el.addEventListener("click", () => {
             document.querySelector(".modal-wrapper.active").classList.remove("active");
+            document.body.classList.remove("noscroll");
         });
     });
 }
@@ -132,6 +141,7 @@ function setActionsCards() {
         el.addEventListener("click", (e) => {
             if (e.target.classList.contains("card-pizza__btn")){
                 document.getElementById("modal-ingredients").classList.add("active");
+                document.body.classList.add("noscroll");
             }
         });
     });
