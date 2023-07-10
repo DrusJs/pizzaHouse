@@ -630,7 +630,7 @@ body.noscroll {
     justify-content: center;
     align-items: center;
     gap: 50px;
-    padding-top: 85px;
+    padding: 85px 0 20px 0;
     overflow-x: hidden;
 }
 .menu__pharagraph {
