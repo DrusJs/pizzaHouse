@@ -237,4 +237,28 @@ function setActionsCards() {
 }
 
 setActionsCards();
+let slider = document.querySelector(".slider__container");
+slider.scrollLeft = 0;
+document.getElementById("main-next").addEventListener("click", () => {
+    let act = document.querySelector(".pagination__silde-button.active");
+    act.classList.remove("active");
+    if (slider.scrollLeft+slider.clientWidth == slider.scrollWidth) {
+        slider.scrollLeft = 0;
+        document.querySelector(".pagination__silde").firstElementChild.classList.add("active");
+    } else {
+        slider.scrollLeft = slider.scrollLeft + slider.clientWidth;
+        act.nextElementSibling.classList.add("active");
+    }
+})
+document.getElementById("main-prev").addEventListener("click", () => {
+    let act = document.querySelector(".pagination__silde-button.active");
+    act.classList.remove("active");
+    if (slider.scrollLeft == 0) {
+        slider.scrollLeft = slider.scrollWidth;
+        document.querySelector(".pagination__silde").lastElementChild.classList.add("active");
+    } else {
+        slider.scrollLeft = slider.scrollLeft - slider.clientWidth;
+        act.previousElementSibling.classList.add("active");
+    }
+})
 
