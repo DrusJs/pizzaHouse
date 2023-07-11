@@ -99,7 +99,7 @@ body.noscroll {
     position: fixed;
     bottom: 0;
     left: 0;
-    display: flex;
+    display: none;
     width: 100%;
     border-radius: 20px 20px 0 0;
     background-color: #FFFFFF;
@@ -2592,6 +2592,9 @@ body.noscroll {
 @media screen and (max-width: 750px) {
     .header__container {
         min-width: 300px;
+    }
+    .mobile-menu {
+        display: flex;
     }
     .menu__main {
         gap: 10px;
