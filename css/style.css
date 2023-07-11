@@ -73,6 +73,7 @@ li {
 html,
 body {
     height: 100%;
+    background-color: #F5F5F5;
 }
 body.noscroll {
 	overflow: hidden;
@@ -1105,6 +1106,7 @@ body.noscroll {
     box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.15);
     display: flex;
     white-space: nowrap;
+    position: relative;
 }
 .basket__card-img {
     margin-right: 21px;
@@ -1142,6 +1144,11 @@ body.noscroll {
     display: flex;
     align-items: center;
     height: 35px;
+}
+.basket-absolute {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 .counter {
     width: 65px;
@@ -2212,6 +2219,16 @@ body.noscroll {
     .menu__main {
         padding-top: 40px;
     }
+    .basket__char {
+        padding-left: 10px;
+        min-width: 140px;
+    }
+    .basket__price {
+        margin-left: 10px;
+    }
+    .main {
+        padding: 50px 0 0 0;
+      }
     .offers {
         padding: 0 20% 0 20%;
     }
@@ -2298,19 +2315,49 @@ body.noscroll {
     .checkout__row .reg-label {
         max-width: 180px;
         width: 100%;
-      }
-      .checkout-form {
+    }
+    .checkout-form {
         max-width: 680px;
-      }
+    }
 
-      .novelty-slider {
+    .novelty-slider {
         display: flex;
         justify-content: flex-start;
         gap: 20px;
         width: 332px;
         padding-bottom: 20px;
         overflow-x: hidden;
-       }
+    }
+    .basket__card {
+        border-radius: 20px;
+        height: 130px;
+    }
+    .basket__card-img {
+        width: 68px;
+        height: 68px;
+    }
+    .basket__card.center {
+        align-items: flex-start;
+    }
+
+    .basket-absolute {
+        display: none;
+    }
+    .basket__char {
+        position: absolute;
+        top: 40px;
+        left: 93px;
+    }
+    .basket__card-counter {
+        position: absolute;
+        top: 85px;
+        left: 190px;
+    }
+    .basket__price {
+        position: absolute;
+        top: 90px;
+        left: 93px;
+    }
 }
 
 @media screen and (max-width: 750px) {
@@ -2357,9 +2404,81 @@ body.noscroll {
         background: rgba(255, 255, 255, 0.0);
     }
 
+    .counter.dark {
+        width: 75px;
+        min-width: 75px;
+        height: 25px;
+        font-size: 20px;
+      }
+      .counter.dark .counter__inc {
+        width: 25px;
+        height: 25px;
+        border: 1px solid #ACC7CD;
+    }
+    .counter.dark .counter__inc.plus {
+        padding-top: 3px;
+    }
+    .counter.dark .counter__value {
+        font-size: 20px;
+    }
+    .basket__total-price {
+        margin-right: 0px;
+        white-space: nowrap;
+    }
+    .basket__total-price .green {
+        margin-left: 5px;
+        font-size: 32px;
+      }
     .pagination__arrow-prev,
     .pagination__arrow-next {
         display: none;
+    }
+    .checkout__row .input__text {
+        width: 100%;
+    }
+    .checkout__container {
+        width: 100%;
+        min-width: 100%;
+    }
+    .checkout__row-city {
+        width: 100%
+      }
+    .textarea {
+        width: 100%;
+    }
+    .checkout-form {
+        width: 100%;
+    }
+    .adress-block {
+        margin-top: -20px;
+      }
+    .checkout__row .input-reg__street {
+        width: 50%;
+    }
+    .checkout__row .input-reg__house {
+        width: 95px;
+    }
+    .checkout__row .input-reg__door {
+        width: 130px;
+        margin-top: 20px;
+    }
+    .reg-label__radio {
+        white-space: nowrap;
+    }
+    .checkrow .message {
+        top: 60px;
+        left: 50px;
+      }
+    .checkout__row .input-reg__floor {
+        width: 89px;
+        margin-top: 20px;
+    }
+    .checkout__row .input-reg__flat {
+        width: 130px;
+    }
+    .checkout__row .input-reg__mail {
+        width: 100%;
+        max-width: 270px;
     }
     .header__container-info {
         gap: 20px;
@@ -2370,6 +2489,11 @@ body.noscroll {
     .card-pizza {
         height: 295px;
         width: 145px;
+    }
+    .basket__card-counter {
+        position: absolute;
+        top: 91px;
+        left: 180px;
     }
     .card-pizza .card-pizza__img {
         left: 3px;
@@ -2497,6 +2621,19 @@ body.noscroll {
       }
     .main .card-pizza__form {
         display: none;
+    }
+    .checkout__row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .basket-title {
+        font-size: 16px;
+    }
+    .basket__char {
+        font-size: 11px;
+        line-height: 15px;
+
     }
     .footer {
         height: 535px;
