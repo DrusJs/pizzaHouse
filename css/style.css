@@ -1096,8 +1096,9 @@ body.noscroll {
 .delivery__info .green {
     color: var(--color-green);
     text-decoration: underline;
+    cursor: pointer;
 }
-.delivery__info .green {
+.delivery__info .green:hover {
     color: var(--color-red);
 }
 
