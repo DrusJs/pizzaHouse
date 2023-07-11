@@ -1316,9 +1316,12 @@ body.noscroll {
     color: var(--color-dark-grey);
     background-color: #FFFFFF;
     cursor: pointer;
+    transition: 200ms;
 }
 .counter.dark .counter__inc:hover {
-    background-image: linear-gradient(90deg, rgba(244,123,32,1) 0%, rgba(255,209,0,1) 100%);;
+    background-image: linear-gradient(90deg, rgba(244,123,32,1) 0%, rgba(255,209,0,1) 100%);
+    color: #FFFFFF;
+    border: 0;
 }
 
 .counter.dark .counter__inc.plus {
