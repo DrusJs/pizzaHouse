@@ -11,6 +11,13 @@
   </head>
   <body>
     <a class="partner-link" href="#"></a>
+    <div class="mobile-menu">
+      <a href="#pizza" class="mobile-menu__list active">Пиццы</a>
+      <a href="#sandwitch" class="mobile-menu__list">Сэндвичи</a>
+      <a href="#pita" class="mobile-menu__list">Питы</a>
+      <a href="#snack" class="mobile-menu__list">Закуски</a>
+      <a href="#hotdogs" class="mobile-menu__list">Хот-доги</a>
+    </div>
     <div class="wrapper">
       <header class="header">
         <a class="header__logo" href="/pizzaHouse/">
@@ -85,7 +92,7 @@
               <a class="container-nav__list" href="/pizzaPita">Закуски</a>
               <a class="container-nav__list" href="/pizzaPita">Хот-доги</a>
               <a class="container-nav__list share-red">Акции</a>
-              <a class="container-nav__list nav-select">
+              <a class="container-nav__list nav-select" id="nav">
                 Инфо
                 <ul class="nav-select__block" id="nav-select">
                   <a class="nav-select__list" href="/pizzaDelivery">Магазины</a>
@@ -175,12 +182,12 @@
                     <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>  
                     <form action="" class="card-pizza__form">
                         <div class="card-pizza__form-row">
-                            <input type="radio" id="card-pizza__radio-one" name="select_size">
-                            <label for="card-pizza__radio-one" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><div class="card-pizza__btn">+ ингредиенты</div>
+                            <input type="radio" id="card-pizza__radio-one1" name="select_size" checked>
+                            <label for="card-pizza__radio-one1" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><div class="card-pizza__btn">+ ингредиенты</div>
                         </div>
                         <div class="card-pizza__form-row">
-                            <input type="radio" id="card-pizza__radio-two" name="select_size">
-                            <label for="card-pizza__radio-two" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
+                            <input type="radio" id="card-pizza__radio-two1" name="select_size">
+                            <label for="card-pizza__radio-two1" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
                             <button class="card-pizza__focus_btn">пышное</button>
                             <button class="card-pizza__select_btn">тонкое</button>
                         </div>
@@ -202,12 +209,12 @@
                     <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>  
                     <form action="" class="card-pizza__form">
                         <div class="card-pizza__form-row">
-                            <input type="radio" id="card-pizza__radio-one" name="select_size">
-                            <label for="card-pizza__radio-one" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><div class="card-pizza__btn">+ ингредиенты</div>
+                            <input type="radio" id="card-pizza__radio-one2" name="select_size" checked>
+                            <label for="card-pizza__radio-one2" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><div class="card-pizza__btn">+ ингредиенты</div>
                         </div>
                         <div class="card-pizza__form-row">
-                            <input type="radio" id="card-pizza__radio-two" name="select_size">
-                            <label for="card-pizza__radio-two" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
+                            <input type="radio" id="card-pizza__radio-two2" name="select_size">
+                            <label for="card-pizza__radio-two2" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
                             <button class="card-pizza__focus_btn">пышное</button>
                             <button class="card-pizza__select_btn">тонкое</button>
                         </div>
@@ -229,12 +236,12 @@
                     <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>  
                     <form action="" class="card-pizza__form">
                         <div class="card-pizza__form-row">
-                            <input type="radio" id="card-pizza__radio-one" name="select_size">
-                            <label for="card-pizza__radio-one" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><div class="card-pizza__btn">+ ингредиенты</div>
+                            <input type="radio" id="card-pizza__radio-one3" name="select_size" checked>
+                            <label for="card-pizza__radio-one3" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><div class="card-pizza__btn">+ ингредиенты</div>
                         </div>
                         <div class="card-pizza__form-row">
-                            <input type="radio" id="card-pizza__radio-two" name="select_size">
-                            <label for="card-pizza__radio-two" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
+                            <input type="radio" id="card-pizza__radio-two3" name="select_size">
+                            <label for="card-pizza__radio-two3" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
                             <button class="card-pizza__focus_btn">пышное</button>
                             <button class="card-pizza__select_btn">тонкое</button>
                         </div>
@@ -256,6 +263,7 @@
           </div>
         </div>
         <div class="menu__container">
+          <a name="pizza"></a>
           <h2 class="menu__header">Пиццы</h2><!--pzz-->
           <ul class="menu__filter">
             <li class="menu__filter-list active">Все</li>
@@ -266,9 +274,8 @@
             <li class="menu__filter-list">Острые</li>
           </ul>
           <div class="menu__main">
-            <div class="greencard__container">
-              <h3 class="greencard__header">Собери
-                  свою пиццу!</h3>
+            <div class="greencard__container" id="constructor-open">
+              <h3 class="greencard__header">Собери свою пиццу!</h3>
               <img class="greencard__img" src="images/cnstrCard.png" alt="pizza">
               <p class="greencard__title">Пицца из половинок</p>
               <p class="greencard__desc">Попробуй больше вкусов
@@ -284,12 +291,12 @@
                   <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>  
                   <form action="" class="card-pizza__form">
                       <div class="card-pizza__form-row">
-                          <input type="radio" id="card-pizza__radio-one" name="select_size">
-                          <label for="card-pizza__radio-one" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><div class="card-pizza__btn">+ ингредиенты</div>
+                          <input type="radio" id="card-pizza__radio-one4" name="select_size" checked>
+                          <label for="card-pizza__radio-one4" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><div class="card-pizza__btn">+ ингредиенты</div>
                       </div>
                       <div class="card-pizza__form-row">
-                          <input type="radio" id="card-pizza__radio-two" name="select_size">
-                          <label for="card-pizza__radio-two" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
+                          <input type="radio" id="card-pizza__radio-two4" name="select_size">
+                          <label for="card-pizza__radio-two4" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
                           <button class="card-pizza__focus_btn">пышное</button>
                           <button class="card-pizza__select_btn">тонкое</button>
                       </div>
@@ -311,12 +318,12 @@
                   <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>  
                   <form action="" class="card-pizza__form">
                       <div class="card-pizza__form-row">
-                          <input type="radio" id="card-pizza__radio-one" name="select_size">
-                          <label for="card-pizza__radio-one" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><div class="card-pizza__btn">+ ингредиенты</div>
+                          <input type="radio" id="card-pizza__radio-one5" name="select_size" checked>
+                          <label for="card-pizza__radio-one5" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><div class="card-pizza__btn">+ ингредиенты</div>
                       </div>
                       <div class="card-pizza__form-row">
-                          <input type="radio" id="card-pizza__radio-two" name="select_size">
-                          <label for="card-pizza__radio-two" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
+                          <input type="radio" id="card-pizza__radio-two5" name="select_size">
+                          <label for="card-pizza__radio-two5" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
                           <button class="card-pizza__focus_btn">пышное</button>
                           <button class="card-pizza__select_btn">тонкое</button>
                       </div>
@@ -338,12 +345,12 @@
                   <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>  
                   <form action="" class="card-pizza__form">
                       <div class="card-pizza__form-row">
-                          <input type="radio" id="card-pizza__radio-one" name="select_size">
-                          <label for="card-pizza__radio-one" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><div class="card-pizza__btn">+ ингредиенты</div>
+                          <input type="radio" id="card-pizza__radio-one6" name="select_size" checked>
+                          <label for="card-pizza__radio-one6" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><div class="card-pizza__btn">+ ингредиенты</div>
                       </div>
                       <div class="card-pizza__form-row">
-                          <input type="radio" id="card-pizza__radio-two" name="select_size">
-                          <label for="card-pizza__radio-two" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
+                          <input type="radio" id="card-pizza__radio-two6" name="select_size">
+                          <label for="card-pizza__radio-two6" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
                           <button class="card-pizza__focus_btn">пышное</button>
                           <button class="card-pizza__select_btn">тонкое</button>
                       </div>
@@ -365,12 +372,12 @@
                   <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>  
                   <form action="" class="card-pizza__form">
                       <div class="card-pizza__form-row">
-                          <input type="radio" id="card-pizza__radio-one" name="select_size">
-                          <label for="card-pizza__radio-one" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><div class="card-pizza__btn">+ ингредиенты</div>
+                          <input type="radio" id="card-pizza__radio-one7" name="select_size" checked>
+                          <label for="card-pizza__radio-one7" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><div class="card-pizza__btn">+ ингредиенты</div>
                       </div>
                       <div class="card-pizza__form-row">
-                          <input type="radio" id="card-pizza__radio-two" name="select_size">
-                          <label for="card-pizza__radio-two" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
+                          <input type="radio" id="card-pizza__radio-two7" name="select_size">
+                          <label for="card-pizza__radio-two7" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
                           <button class="card-pizza__focus_btn">пышное</button>
                           <button class="card-pizza__select_btn">тонкое</button>
                       </div>
@@ -392,12 +399,12 @@
                   <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>  
                   <form action="" class="card-pizza__form">
                       <div class="card-pizza__form-row">
-                          <input type="radio" id="card-pizza__radio-one" name="select_size">
-                          <label for="card-pizza__radio-one" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><div class="card-pizza__btn">+ ингредиенты</div>
+                          <input type="radio" id="card-pizza__radio-one8" name="select_size" checked>
+                          <label for="card-pizza__radio-one8" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><div class="card-pizza__btn">+ ингредиенты</div>
                       </div>
                       <div class="card-pizza__form-row">
-                          <input type="radio" id="card-pizza__radio-two" name="select_size">
-                          <label for="card-pizza__radio-two" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
+                          <input type="radio" id="card-pizza__radio-two8" name="select_size">
+                          <label for="card-pizza__radio-two8" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
                           <button class="card-pizza__focus_btn">пышное</button>
                           <button class="card-pizza__select_btn">тонкое</button>
                       </div>
@@ -419,12 +426,12 @@
                   <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>  
                   <form action="" class="card-pizza__form">
                       <div class="card-pizza__form-row">
-                          <input type="radio" id="card-pizza__radio-one" name="select_size">
-                          <label for="card-pizza__radio-one" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><div class="card-pizza__btn">+ ингредиенты</div>
+                          <input type="radio" id="card-pizza__radio-one9" name="select_size" checked>
+                          <label for="card-pizza__radio-one9" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><div class="card-pizza__btn">+ ингредиенты</div>
                       </div>
                       <div class="card-pizza__form-row">
-                          <input type="radio" id="card-pizza__radio-two" name="select_size">
-                          <label for="card-pizza__radio-two" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
+                          <input type="radio" id="card-pizza__radio-two9" name="select_size">
+                          <label for="card-pizza__radio-two9" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
                           <button class="card-pizza__focus_btn">пышное</button>
                           <button class="card-pizza__select_btn">тонкое</button>
                       </div>
@@ -446,12 +453,12 @@
                   <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>  
                   <form action="" class="card-pizza__form">
                       <div class="card-pizza__form-row">
-                          <input type="radio" id="card-pizza__radio-one" name="select_size">
-                          <label for="card-pizza__radio-one" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><div class="card-pizza__btn">+ ингредиенты</div>
+                          <input type="radio" id="card-pizza__radio-one10" name="select_size" checked>
+                          <label for="card-pizza__radio-one10" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><div class="card-pizza__btn">+ ингредиенты</div>
                       </div>
                       <div class="card-pizza__form-row">
-                          <input type="radio" id="card-pizza__radio-two" name="select_size">
-                          <label for="card-pizza__radio-two" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
+                          <input type="radio" id="card-pizza__radio-two10" name="select_size">
+                          <label for="card-pizza__radio-two10" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
                           <button class="card-pizza__focus_btn">пышное</button>
                           <button class="card-pizza__select_btn">тонкое</button>
                       </div>
@@ -473,12 +480,12 @@
                   <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>  
                   <form action="" class="card-pizza__form">
                       <div class="card-pizza__form-row">
-                          <input type="radio" id="card-pizza__radio-one" name="select_size">
-                          <label for="card-pizza__radio-one" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><div class="card-pizza__btn">+ ингредиенты</div>
+                          <input type="radio" id="card-pizza__radio-one11" name="select_size" checked>
+                          <label for="card-pizza__radio-one11" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><div class="card-pizza__btn">+ ингредиенты</div>
                       </div>
                       <div class="card-pizza__form-row">
-                          <input type="radio" id="card-pizza__radio-two" name="select_size">
-                          <label for="card-pizza__radio-two" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
+                          <input type="radio" id="card-pizza__radio-two11" name="select_size">
+                          <label for="card-pizza__radio-two11" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
                           <button class="card-pizza__focus_btn">пышное</button>
                           <button class="card-pizza__select_btn">тонкое</button>
                       </div>
@@ -500,12 +507,12 @@
                   <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>  
                   <form action="" class="card-pizza__form">
                       <div class="card-pizza__form-row">
-                          <input type="radio" id="card-pizza__radio-one" name="select_size">
-                          <label for="card-pizza__radio-one" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><div class="card-pizza__btn">+ ингредиенты</div>
+                          <input type="radio" id="card-pizza__radio-one12" name="select_size" checked>
+                          <label for="card-pizza__radio-one12" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><div class="card-pizza__btn">+ ингредиенты</div>
                       </div>
                       <div class="card-pizza__form-row">
-                          <input type="radio" id="card-pizza__radio-two" name="select_size">
-                          <label for="card-pizza__radio-two" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
+                          <input type="radio" id="card-pizza__radio-two12" name="select_size">
+                          <label for="card-pizza__radio-two12" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
                           <button class="card-pizza__focus_btn">пышное</button>
                           <button class="card-pizza__select_btn">тонкое</button>
                       </div>
@@ -527,12 +534,12 @@
                   <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>  
                   <form action="" class="card-pizza__form">
                       <div class="card-pizza__form-row">
-                          <input type="radio" id="card-pizza__radio-one" name="select_size">
-                          <label for="card-pizza__radio-one" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><div class="card-pizza__btn">+ ингредиенты</div>
+                          <input type="radio" id="card-pizza__radio-one13" name="select_size" checked>
+                          <label for="card-pizza__radio-one13" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><div class="card-pizza__btn">+ ингредиенты</div>
                       </div>
                       <div class="card-pizza__form-row">
-                          <input type="radio" id="card-pizza__radio-two" name="select_size">
-                          <label for="card-pizza__radio-two" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
+                          <input type="radio" id="card-pizza__radio-two13" name="select_size">
+                          <label for="card-pizza__radio-two13" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
                           <button class="card-pizza__focus_btn">пышное</button>
                           <button class="card-pizza__select_btn">тонкое</button>
                       </div>
@@ -554,12 +561,12 @@
                   <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>  
                   <form action="" class="card-pizza__form">
                       <div class="card-pizza__form-row">
-                          <input type="radio" id="card-pizza__radio-one" name="select_size">
-                          <label for="card-pizza__radio-one" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><div class="card-pizza__btn">+ ингредиенты</div>
+                          <input type="radio" id="card-pizza__radio-one14" name="select_size" checked>
+                          <label for="card-pizza__radio-one14" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><div class="card-pizza__btn">+ ингредиенты</div>
                       </div>
                       <div class="card-pizza__form-row">
-                          <input type="radio" id="card-pizza__radio-two" name="select_size">
-                          <label for="card-pizza__radio-two" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
+                          <input type="radio" id="card-pizza__radio-two14" name="select_size">
+                          <label for="card-pizza__radio-two14" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
                           <button class="card-pizza__focus_btn">пышное</button>
                           <button class="card-pizza__select_btn">тонкое</button>
                       </div>
@@ -581,12 +588,12 @@
                   <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>  
                   <form action="" class="card-pizza__form">
                       <div class="card-pizza__form-row">
-                          <input type="radio" id="card-pizza__radio-one" name="select_size">
-                          <label for="card-pizza__radio-one" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><div class="card-pizza__btn">+ ингредиенты</div>
+                          <input type="radio" id="card-pizza__radio-one15" name="select_size" checked>
+                          <label for="card-pizza__radio-one15" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><div class="card-pizza__btn">+ ингредиенты</div>
                       </div>
                       <div class="card-pizza__form-row">
-                          <input type="radio" id="card-pizza__radio-two" name="select_size">
-                          <label for="card-pizza__radio-two" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
+                          <input type="radio" id="card-pizza__radio-two15" name="select_size">
+                          <label for="card-pizza__radio-two15" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
                           <button class="card-pizza__focus_btn">пышное</button>
                           <button class="card-pizza__select_btn">тонкое</button>
                       </div>
@@ -608,12 +615,12 @@
                   <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>  
                   <form action="" class="card-pizza__form">
                       <div class="card-pizza__form-row">
-                          <input type="radio" id="card-pizza__radio-one" name="select_size">
-                          <label for="card-pizza__radio-one" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><div class="card-pizza__btn">+ ингредиенты</div>
+                          <input type="radio" id="card-pizza__radio-one16" name="select_size" checked>
+                          <label for="card-pizza__radio-one16" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><div class="card-pizza__btn">+ ингредиенты</div>
                       </div>
                       <div class="card-pizza__form-row">
-                          <input type="radio" id="card-pizza__radio-two" name="select_size">
-                          <label for="card-pizza__radio-two" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
+                          <input type="radio" id="card-pizza__radio-two16" name="select_size">
+                          <label for="card-pizza__radio-two16" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
                           <button class="card-pizza__focus_btn">пышное</button>
                           <button class="card-pizza__select_btn">тонкое</button>
                       </div>
@@ -635,12 +642,12 @@
                   <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>  
                   <form action="" class="card-pizza__form">
                       <div class="card-pizza__form-row">
-                          <input type="radio" id="card-pizza__radio-one" name="select_size">
-                          <label for="card-pizza__radio-one" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><div class="card-pizza__btn">+ ингредиенты</div>
+                          <input type="radio" id="card-pizza__radio-one17" name="select_size" checked>
+                          <label for="card-pizza__radio-one17" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><div class="card-pizza__btn">+ ингредиенты</div>
                       </div>
                       <div class="card-pizza__form-row">
-                          <input type="radio" id="card-pizza__radio-two" name="select_size">
-                          <label for="card-pizza__radio-two" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
+                          <input type="radio" id="card-pizza__radio-two17" name="select_size">
+                          <label for="card-pizza__radio-two17" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
                           <button class="card-pizza__focus_btn">пышное</button>
                           <button class="card-pizza__select_btn">тонкое</button>
                       </div>
@@ -662,12 +669,12 @@
                   <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>  
                   <form action="" class="card-pizza__form">
                       <div class="card-pizza__form-row">
-                          <input type="radio" id="card-pizza__radio-one" name="select_size">
-                          <label for="card-pizza__radio-one" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><div class="card-pizza__btn">+ ингредиенты</div>
+                          <input type="radio" id="card-pizza__radio-one18" name="select_size" checked>
+                          <label for="card-pizza__radio-one18" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><div class="card-pizza__btn">+ ингредиенты</div>
                       </div>
                       <div class="card-pizza__form-row">
-                          <input type="radio" id="card-pizza__radio-two" name="select_size">
-                          <label for="card-pizza__radio-two" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
+                          <input type="radio" id="card-pizza__radio-two18" name="select_size">
+                          <label for="card-pizza__radio-two18" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
                           <button class="card-pizza__focus_btn">пышное</button>
                           <button class="card-pizza__select_btn">тонкое</button>
                       </div>
@@ -689,12 +696,12 @@
                   <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>  
                   <form action="" class="card-pizza__form">
                       <div class="card-pizza__form-row">
-                          <input type="radio" id="card-pizza__radio-one" name="select_size">
-                          <label for="card-pizza__radio-one" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><div class="card-pizza__btn">+ ингредиенты</div>
+                          <input type="radio" id="card-pizza__radio-one19" name="select_size" checked>
+                          <label for="card-pizza__radio-one19" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><div class="card-pizza__btn">+ ингредиенты</div>
                       </div>
                       <div class="card-pizza__form-row">
-                          <input type="radio" id="card-pizza__radio-two" name="select_size">
-                          <label for="card-pizza__radio-two" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
+                          <input type="radio" id="card-pizza__radio-two19" name="select_size">
+                          <label for="card-pizza__radio-two19" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
                           <button class="card-pizza__focus_btn">пышное</button>
                           <button class="card-pizza__select_btn">тонкое</button>
                       </div>
@@ -716,12 +723,12 @@
                   <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>  
                   <form action="" class="card-pizza__form">
                       <div class="card-pizza__form-row">
-                          <input type="radio" id="card-pizza__radio-one" name="select_size">
-                          <label for="card-pizza__radio-one" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><div class="card-pizza__btn">+ ингредиенты</div>
+                          <input type="radio" id="card-pizza__radio-one20" name="select_size" checked>
+                          <label for="card-pizza__radio-one20" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><div class="card-pizza__btn">+ ингредиенты</div>
                       </div>
                       <div class="card-pizza__form-row">
-                          <input type="radio" id="card-pizza__radio-two" name="select_size">
-                          <label for="card-pizza__radio-two" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
+                          <input type="radio" id="card-pizza__radio-two20" name="select_size">
+                          <label for="card-pizza__radio-two20" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
                           <button class="card-pizza__focus_btn">пышное</button>
                           <button class="card-pizza__select_btn">тонкое</button>
                       </div>
@@ -743,12 +750,12 @@
                   <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>  
                   <form action="" class="card-pizza__form">
                       <div class="card-pizza__form-row">
-                          <input type="radio" id="card-pizza__radio-one" name="select_size">
-                          <label for="card-pizza__radio-one" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><div class="card-pizza__btn">+ ингредиенты</div>
+                          <input type="radio" id="card-pizza__radio-one21" name="select_size" checked>
+                          <label for="card-pizza__radio-one21" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><div class="card-pizza__btn">+ ингредиенты</div>
                       </div>
                       <div class="card-pizza__form-row">
-                          <input type="radio" id="card-pizza__radio-two" name="select_size">
-                          <label for="card-pizza__radio-two" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
+                          <input type="radio" id="card-pizza__radio-two21" name="select_size">
+                          <label for="card-pizza__radio-two21" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
                           <button class="card-pizza__focus_btn">пышное</button>
                           <button class="card-pizza__select_btn">тонкое</button>
                       </div>
@@ -770,12 +777,12 @@
                   <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>  
                   <form action="" class="card-pizza__form">
                       <div class="card-pizza__form-row">
-                          <input type="radio" id="card-pizza__radio-one" name="select_size">
-                          <label for="card-pizza__radio-one" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><div class="card-pizza__btn">+ ингредиенты</div>
+                          <input type="radio" id="card-pizza__radio-one22" name="select_size" checked>
+                          <label for="card-pizza__radio-one22" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><div class="card-pizza__btn">+ ингредиенты</div>
                       </div>
                       <div class="card-pizza__form-row">
-                          <input type="radio" id="card-pizza__radio-two" name="select_size">
-                          <label for="card-pizza__radio-two" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
+                          <input type="radio" id="card-pizza__radio-two22" name="select_size">
+                          <label for="card-pizza__radio-two22" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
                           <button class="card-pizza__focus_btn">пышное</button>
                           <button class="card-pizza__select_btn">тонкое</button>
                       </div>
@@ -797,12 +804,12 @@
                   <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>  
                   <form action="" class="card-pizza__form">
                       <div class="card-pizza__form-row">
-                          <input type="radio" id="card-pizza__radio-one" name="select_size">
-                          <label for="card-pizza__radio-one" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><div class="card-pizza__btn">+ ингредиенты</div>
+                          <input type="radio" id="card-pizza__radio-one23" name="select_size" checked>
+                          <label for="card-pizza__radio-one23" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><div class="card-pizza__btn">+ ингредиенты</div>
                       </div>
                       <div class="card-pizza__form-row">
-                          <input type="radio" id="card-pizza__radio-two" name="select_size">
-                          <label for="card-pizza__radio-two" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
+                          <input type="radio" id="card-pizza__radio-two23" name="select_size">
+                          <label for="card-pizza__radio-two23" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
                           <button class="card-pizza__focus_btn">пышное</button>
                           <button class="card-pizza__select_btn">тонкое</button>
                       </div>
@@ -824,12 +831,12 @@
                   <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>  
                   <form action="" class="card-pizza__form">
                       <div class="card-pizza__form-row">
-                          <input type="radio" id="card-pizza__radio-one" name="select_size">
-                          <label for="card-pizza__radio-one" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><div class="card-pizza__btn">+ ингредиенты</div>
+                          <input type="radio" id="card-pizza__radio-one24" name="select_size" checked>
+                          <label for="card-pizza__radio-one24" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><div class="card-pizza__btn">+ ингредиенты</div>
                       </div>
                       <div class="card-pizza__form-row">
-                          <input type="radio" id="card-pizza__radio-two" name="select_size">
-                          <label for="card-pizza__radio-two" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
+                          <input type="radio" id="card-pizza__radio-two24" name="select_size">
+                          <label for="card-pizza__radio-two24" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
                           <button class="card-pizza__focus_btn">пышное</button>
                           <button class="card-pizza__select_btn">тонкое</button>
                       </div>
@@ -851,12 +858,12 @@
                   <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>  
                   <form action="" class="card-pizza__form">
                       <div class="card-pizza__form-row">
-                          <input type="radio" id="card-pizza__radio-one" name="select_size">
-                          <label for="card-pizza__radio-one" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><div class="card-pizza__btn">+ ингредиенты</div>
+                          <input type="radio" id="card-pizza__radio-one25" name="select_size" checked>
+                          <label for="card-pizza__radio-one25" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><div class="card-pizza__btn">+ ингредиенты</div>
                       </div>
                       <div class="card-pizza__form-row">
-                          <input type="radio" id="card-pizza__radio-two" name="select_size">
-                          <label for="card-pizza__radio-two" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
+                          <input type="radio" id="card-pizza__radio-two25" name="select_size">
+                          <label for="card-pizza__radio-two25" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
                           <button class="card-pizza__focus_btn">пышное</button>
                           <button class="card-pizza__select_btn">тонкое</button>
                       </div>
@@ -878,12 +885,12 @@
                   <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>  
                   <form action="" class="card-pizza__form">
                       <div class="card-pizza__form-row">
-                          <input type="radio" id="card-pizza__radio-one" name="select_size">
-                          <label for="card-pizza__radio-one" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><div class="card-pizza__btn">+ ингредиенты</div>
+                          <input type="radio" id="card-pizza__radio-one26" name="select_size" checked>
+                          <label for="card-pizza__radio-one26" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><div class="card-pizza__btn">+ ингредиенты</div>
                       </div>
                       <div class="card-pizza__form-row">
-                          <input type="radio" id="card-pizza__radio-two" name="select_size">
-                          <label for="card-pizza__radio-two" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
+                          <input type="radio" id="card-pizza__radio-two26" name="select_size">
+                          <label for="card-pizza__radio-two26" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
                           <button class="card-pizza__focus_btn">пышное</button>
                           <button class="card-pizza__select_btn">тонкое</button>
                       </div>
@@ -905,12 +912,12 @@
                   <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>  
                   <form action="" class="card-pizza__form">
                       <div class="card-pizza__form-row">
-                          <input type="radio" id="card-pizza__radio-one" name="select_size">
-                          <label for="card-pizza__radio-one" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><div class="card-pizza__btn">+ ингредиенты</div>
+                          <input type="radio" id="card-pizza__radio-one27" name="select_size" checked>
+                          <label for="card-pizza__radio-one27" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><div class="card-pizza__btn">+ ингредиенты</div>
                       </div>
                       <div class="card-pizza__form-row">
-                          <input type="radio" id="card-pizza__radio-two" name="select_size">
-                          <label for="card-pizza__radio-two" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
+                          <input type="radio" id="card-pizza__radio-two27" name="select_size">
+                          <label for="card-pizza__radio-two27" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
                           <button class="card-pizza__focus_btn">пышное</button>
                           <button class="card-pizza__select_btn">тонкое</button>
                       </div>
@@ -926,6 +933,7 @@
           </div>
         </div>
         <div class="menu__container">
+          <a name="pita"></a>
           <h2 class="menu__header">Питы</h2>
           <div class="menu__main start">
             <p class="menu__pharagraph">Бездрожжевые пресные лепешки на воде, которые выпекаются на сковороде, а внутри них сочная начинка: мясо, овощи, соусы</p>
@@ -971,6 +979,7 @@
           </div>
         </div>
         <div class="menu__container">
+          <a name="snack"></a>
           <h2 class="menu__header">Закуски к пиву</h2>
           <div class="menu__main">
             <p class="menu__pharagraph empty"></p>
@@ -1055,6 +1064,7 @@
           </div>
         </div>
         <div class="menu__container">
+          <a name="sandwitch"></a>
           <h2 class="menu__header">Сэндвичи</h2>
           <div class="menu__main">
             <p class="menu__pharagraph empty"></p>
@@ -1329,7 +1339,87 @@
     <div class="modal-wrapper" id="modal-constructor">
       <div class="modal">
         <img class="modal__close-button" src="images/modalClose.svg" alt="">
-        
+        <div class="modal__constructor">
+          <h3 class="modal__title title-reg">Собери свою пиццу!</h3>
+          <div class="constructor__action">
+            <div class="constructor-text">
+              <div>Выбери 2 пиццы</div>
+              <p>Размер 35 см</p>
+              <img class="constructor-animation" src="images/greenArrow.svg" alt="">
+            </div>
+            <div class="constructor-flex">
+              <div class="pizza-constructor">
+                <img src="images/leftCnstr.png" alt="">
+                <img src="images/rightCnstr.png" alt="">
+              </div>
+              <div class="constructor-buttons">
+                <button class="card-pizza_cart-btn item-card__btn active">
+                  <div class="cart-btn__inc minus">&ndash;</div>
+                  790 &#8381;
+                  <div class="cart-btn__inc plus">+</div>
+                  <div class="cart-btn__multy">x<span>1</span></div>
+                </button>
+                <div class="row">
+                  <p>тесто:</p>
+                  <button class="card-pizza__focus_btn">пышное</button>
+                  <button class="card-pizza__select_btn">тонкое</button>
+                </div>
+                <button class="sumbit-btn disabled">В КОРЗИНУ</button>
+              </div>
+            </div>
+          </div>
+          <div class="constructor__list">
+            <div class="constructor__card">
+              <img class="constructor__card-img" src="images/pizzaCard.png" alt="">
+              <div class="constructor__card-field">
+                <div class="card-field__name">Филадельфия</div>
+                <div class="card-field__price">790 &#8381;</div>
+              </div>
+            </div>
+            <div class="constructor__card">
+              <img class="constructor__card-img" src="images/pizzaCard.png" alt="">
+              <div class="constructor__card-field">
+                <div class="card-field__name">Филадельфия</div>
+                <div class="card-field__price">790 &#8381;</div>
+              </div>
+            </div>
+            <div class="constructor__card">
+              <img class="constructor__card-img" src="images/pizzaCard.png" alt="">
+              <div class="constructor__card-field">
+                <div class="card-field__name">Филадельфия</div>
+                <div class="card-field__price">790 &#8381;</div>
+              </div>
+            </div>
+            <div class="constructor__card">
+              <img class="constructor__card-img" src="images/pizzaCard.png" alt="">
+              <div class="constructor__card-field">
+                <div class="card-field__name">Филадельфия</div>
+                <div class="card-field__price">790 &#8381;</div>
+              </div>
+            </div>
+            <div class="constructor__card active">
+              <img class="constructor__card-img" src="images/pizzaCard.png" alt="">
+              <div class="constructor__card-field">
+                <div class="card-field__name">Филадельфия</div>
+                <div class="card-field__price">790 &#8381;</div>
+              </div>
+            </div>
+            <div class="constructor__card">
+              <img class="constructor__card-img" src="images/pizzaCard.png" alt="">
+              <div class="constructor__card-field">
+                <div class="card-field__name">Филадельфия</div>
+                <div class="card-field__price">790 &#8381;</div>
+              </div>
+            </div>
+            <div class="constructor__card">
+              <img class="constructor__card-img" src="images/pizzaCard.png" alt="">
+              <div class="constructor__card-field">
+                <div class="card-field__name">Филадельфия</div>
+                <div class="card-field__price">790 &#8381;</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="modal-wrapper" id="modal-ingredients">

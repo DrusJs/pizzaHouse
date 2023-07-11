@@ -9,6 +9,30 @@ const locationSelect = document.getElementById("location-select");
 const locationField = document.getElementById("location-select-value");
 const locationOptions = document.querySelectorAll(".location-select__list");
 
+const navBlock = document.getElementById("nav");
+const navSelect = document.getElementById("nav-select");
+const navOptions = document.querySelectorAll(".nav-select__list");
+
+
+navBlock.addEventListener("mouseover", () => {
+    navSelect.classList.add("active");
+});
+navSelect.addEventListener("mouseover", () => {
+    navSelect.classList.add("active");
+});
+navBlock.addEventListener("mouseout", () => {
+    navSelect.classList.remove("active");
+});
+navSelect.addEventListener("mouseout", () => {
+    navSelect.classList.remove("active");
+});
+navOptions.forEach(el => {
+   el.addEventListener("click", (e) => {
+        navField.innerHTML = e.currentTarget.innerHTML;
+        navSelect.classList.remove("active");
+   });
+});
+
 burgerButton.addEventListener("click", ()=>{
     burgerButton.classList.toggle("active");
     if (burgerButton.classList.contains("active")) {
@@ -29,6 +53,14 @@ modalWrappers.forEach(el =>{
     });
 });
 
+document.querySelectorAll(".mobile-menu__list").forEach(el => {
+    el.addEventListener("click", (e) => {
+        document.querySelector(".mobile-menu__list.active").classList.remove("active");
+        e.currentTarget.classList.add("active");
+        console.log(1);
+    })
+})
+
 modalCloseButtons.forEach(el => {
     el.addEventListener("click", (e) => {
         e.currentTarget.parentElement.parentElement.classList.remove("active");
@@ -38,7 +70,7 @@ modalCloseButtons.forEach(el => {
 
 
 try{
-    document.getElementById("cnstr-button").addEventListener("click", () => {
+    document.getElementById("constructor-open").addEventListener("click", () => {
         document.getElementById("modal-constructor").classList.add("active");
     });
 } catch {}
@@ -64,10 +96,10 @@ locationSelect.addEventListener("mouseout", () => {
 });
 locationOptions.forEach(el => {
    el.addEventListener("click", (e) => {
-        locationField.innerHTML = e.currentTarget.innerHTML;
         locationSelect.classList.remove("active");
    });
 });
+
 
 document.querySelectorAll(".menu__filter-list").forEach(el => {
     el.addEventListener("click", (e) => {
