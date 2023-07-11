@@ -1361,6 +1361,17 @@ body.noscroll {
     color: var(--color-dark-grey);
     border-radius: 0 0 20px 0;
 }
+.offers {
+    position: relative;
+    top: 96px;
+    padding: 0 0 0 380px;
+    height: 123px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    font-size: 23px;
+    flex-wrap: wrap;
+}
 .offer__whitespace::before {
     content: "";
     position: absolute;
@@ -1384,17 +1395,6 @@ body.noscroll {
     -webkit-box-shadow: -10px -10px 0px 5px #FFFFFF;
     -moz-box-shadow: -10px -10px 0px 5px #FFFFFF;
     box-shadow: -10px -10px 0px 5px #FFFFFF;
-}
-.offers {
-    position: relative;
-    top: 96px;
-    padding: 0 0 0 380px;
-    height: 123px;
-    gap: 10px;
-    display: flex;
-    flex-direction: column;
-    font-size: 23px;
-    flex-wrap: wrap;
 }
 /**************************************/
 /*****************delivery.html*********************/
@@ -2798,7 +2798,7 @@ body.noscroll {
         margin-left: 0;
         font-size: 16px;
         border: 1px solid var(--color-light-grey);
-      }
+    }
     .card-pizza .card-pizza_cart-btn.item-card__btn.active:hover {
         height: 26px;
         min-width: 66px;
@@ -2814,42 +2814,42 @@ body.noscroll {
         margin-left: 0;
         font-size: 16px;
         border: 1px solid var(--color-light-grey);
-      }
+    }
     .card-pizza .card-pizza_cart-btn.active .cart-btn__inc {
         display: none;
-        }
+    }
     .card-pizza .card-pizza_cart-btn.active .cart-btn__multy {
         display: none;
-        }
+    }
     .greencard__container {
         height: 295px;
         width: 145px;
         border-radius: 20px;
         background: var(--color-green);
         box-shadow: 0px 4px 20px 0px rgba(104, 166, 59, 0.30);
-      }
-      .greencard__header {
+    }
+    .greencard__header {
         font-size: 20px;
         line-height: 20px;
         margin: 18px 0 10px 0;
         width: 114px;
-      }
-      .greencard__img {
+    }
+    .greencard__img {
         width: 125px;
         height: 71px;
-      }
-      .greencard__title {
+    }
+    .greencard__title {
         font-size: 16px;
         line-height: 20px;
         margin-top: 20px;
-      }
-      .greencard__desc {
+    }
+    .greencard__desc {
         font-size: 11px;
         line-height: 15px;
         width: 128px;
         margin-bottom: 15px;
-      }
-      .greencard_btn {
+    }
+    .greencard_btn {
         width: 97px;
         height: 32px;
         font-family: CRRegular4;
@@ -2859,7 +2859,7 @@ body.noscroll {
         background-color: #FFFFFF;
         border: 1px solid var(--color-light-grey);
         cursor: pointer;
-      }
+    }
     .main .card-pizza__form {
         display: none;
     }
@@ -2875,6 +2875,23 @@ body.noscroll {
         font-size: 11px;
         line-height: 15px;
 
+    }
+    .offer__container {
+        height: 100%;
+        padding-bottom: 110px;
+    }
+    .offer__whitespace {
+        width: 223px;
+        height: 48px;
+        font-size: 22px;
+        line-height: 26px;
+    }
+    .offers {
+        white-space: nowrap;
+        top: 90px;
+        padding: 0;
+        text-align: center;
+        height: 100%;
     }
     .constructor-buttons {
        gap: 5px;
