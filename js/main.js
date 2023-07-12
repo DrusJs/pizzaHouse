@@ -55,9 +55,8 @@ modalWrappers.forEach(el =>{
 
 document.querySelectorAll(".mobile-menu__list").forEach(el => {
     el.addEventListener("click", (e) => {
-        document.querySelector(".mobile-menu__list.active").classList.remove("active");
+        document.querySelector(".mobile-menf__list.active").classList.remove("active");
         e.currentTarget.classList.add("active");
-        console.log(1);
     })
 })
 
@@ -167,7 +166,7 @@ function setIntervalSlider() {
         document.getElementById("main-next").click()
     }, 3500)
 }
-setIntervalSlider()
+
 function setActionsCards() {
     document.querySelectorAll(".card-pizza_cart-btn").forEach(el => {
         el.addEventListener("click", (e) => {
@@ -266,8 +265,13 @@ function setActionsCards() {
         })
     })
 }
-
+try {
 setActionsCards();
+} catch {}
+try {
+setIntervalSlider();
+} catch {}
+try {
 let pg = 0;
 let slider = document.querySelector(".slider__container");
 slider.addEventListener('scroll', function() {
@@ -363,3 +367,52 @@ document.querySelectorAll(".pagination__slide-button").forEach(el => {
 if (window.matchMedia('(max-width: 750px)').matches) {
     clearInterval(intSlider);
 }
+} catch {}
+try {
+    const profilenav = document.querySelectorAll(".profile-nav__list");
+const profilecontent = document.querySelectorAll(".profile__container-page");
+for (let i = 0; i < 2; i++) {
+    profilenav[i].addEventListener("click", (e) => {
+        document.querySelector(".profile-nav__list.active").classList.remove("active");
+        e.currentTarget.classList.add("active");
+        document.querySelector(".profile__container-page.active").classList.remove("active");
+        profilecontent[i].classList.add("active");
+    });
+  }
+
+const openAccordBtn = document.querySelectorAll(".show-hide__button");
+openAccordBtn.forEach(el => {
+    el.addEventListener("click", (e) => {
+        e.currentTarget.parentElement.parentElement.parentElement.classList.toggle("active");
+    })
+})
+} catch {}
+function setBascketCardAction() {
+    document.querySelectorAll(".dark .counter__inc.plus").forEach(el => {
+        el.addEventListener("click", (e) => {
+            let multy = e.currentTarget.previousElementSibling.innerHTML;
+            e.currentTarget.previousElementSibling.innerHTML = +multy+1;
+        });
+    });
+    document.querySelectorAll(".dark .counter__inc.minus").forEach(el => {
+        el.addEventListener("click", (e) => {
+            let multy = e.currentTarget.nextElementSibling.innerHTML;
+            if (+multy < 2){
+                let block = e.currentTarget.parentElement.parentElement.parentElement;
+                if (block.parentElement.classList.contains("basket__card")) {
+                    block.parentElement.remove();
+                    return;
+                }
+                if (e.currentTarget.parentElement.parentElement.parentElement.classList.contains("basket__card")) {
+                    block.remove();
+                }
+            } else {
+                e.currentTarget.nextElementSibling.innerHTML = +multy-1;
+            }
+        });
+    });
+}
+try {
+
+    setBascketCardAction()
+} catch {}

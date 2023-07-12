@@ -2841,6 +2841,7 @@ body.noscroll {
     }
     .slide__preview {
         max-width: 70%;
+        margin: 0 auto;
       }
       .slide__description {
         display: flex;
@@ -2854,7 +2855,7 @@ body.noscroll {
         min-width: 100%;
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
         gap: 30px;
         position:static;
         top: 0;
