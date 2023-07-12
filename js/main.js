@@ -185,7 +185,6 @@ function setActionsCards() {
     document.querySelectorAll(".card-pizza .card-pizza_cart-btn").forEach(el => {
         el.addEventListener("click", (e) => {
             if (window.matchMedia('(max-width: 750px)').matches) {
-
                 document.getElementById("modal-pizza").classList.add("active");
                 document.body.classList.add("noscroll");
                 return;
