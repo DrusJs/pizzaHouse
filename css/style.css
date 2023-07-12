@@ -2854,7 +2854,7 @@ body.noscroll {
         min-width: 100%;
         display: flex;
         justify-content: space-between;
-        align-items: flex-start;
+        align-items: center;
         gap: 30px;
         position:static;
         top: 0;
