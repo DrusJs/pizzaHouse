@@ -75,13 +75,6 @@ try{
     });
 } catch {}
 
-// locationBlock.addEventListener("click", (e) => {
-//     if (e.target.classList.contains("location") || e.target.classList.contains("location-select-value")){
-//         locationSelect.classList.add("active");
-//     } else {
-//         locationSelect.classList.remove("active");
-//     }
-// });
 locationBlock.addEventListener("mouseover", () => {
     locationSelect.classList.add("active");
 });
