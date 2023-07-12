@@ -569,7 +569,9 @@ body.noscroll {
     opacity: 0;
     transition: 600ms;
     background-color: #FCFCFC;
+    scroll-snap-stop: always;
 }
+
 .slider__slide.active {
     transform: translate(0px,0px);
     max-width: 100%;
