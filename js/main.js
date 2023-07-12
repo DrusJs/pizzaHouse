@@ -95,7 +95,7 @@ locationSelect.addEventListener("mouseout", () => {
     locationSelect.classList.remove("active");
 });
 locationOptions.forEach(el => {
-   el.addEventListener("click", (e) => {
+   el.addEventListener("click", () => {
         locationSelect.classList.remove("active");
    });
 });
@@ -276,10 +276,20 @@ setActionsCards();
 let pg = 0;
 let slider = document.querySelector(".slider__container");
 slider.addEventListener('scroll', function() {
-    if (Math.trunc(slider.scrollLeft / 310) != pg) {
-        pg = Math.trunc(slider.scrollLeft / 310);
+    let w = document.querySelector(".slider__container").clientWidth - 60;
+    if (Math.trunc(slider.scrollLeft / w) != pg) {
+        pg = Math.trunc(slider.scrollLeft / w);
         document.querySelector(".slidepag .dot-page.active").classList.remove("active");
         document.querySelectorAll(".slidepag .dot-page")[pg].classList.add("active");
+    }
+});
+let pg2 = 0;
+let slider2 = document.querySelector(".novelty-slider");
+slider2.addEventListener('scroll', function() {
+    if (Math.trunc(slider2.scrollLeft / 100) != pg2) {
+        pg2 = Math.trunc(slider2.scrollLeft / 100);
+        document.querySelector(".novelty-pages .pages-mobile .dot-page.active").classList.remove("active");
+        document.querySelectorAll(".novelty-pages .pages-mobile .dot-page")[pg2].classList.add("active");
     }
 });
 document.getElementById("main-next").addEventListener("click", () => {
@@ -326,3 +336,6 @@ document.querySelectorAll(".pagination__slide-button").forEach(el => {
     })
 })
 
+if (window.matchMedia('(max-width: 750px)').matches) {
+    clearInterval(intSlider);
+}

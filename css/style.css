@@ -538,7 +538,7 @@ body.noscroll {
     display: flex;
     overflow: hidden;
     scroll-snap-type: x mandatory;
-    scroll-padding: 0 10px;
+    scroll-padding: 0 30px;
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
@@ -2567,9 +2567,10 @@ body.noscroll {
     }
     .menu__filter {
         position: absolute;
-        width: 120%;
+        width: calc(100% + 60px);
         margin-left: 0;
-        left: 0px;
+        padding-left: 30px;
+        left: -30px;
         top: 30px;
         overflow-x: scroll;
         scrollbar-width: none;
@@ -2796,7 +2797,7 @@ body.noscroll {
         margin: 20px 0 0 0;
       }
     .slider__slide {
-        width: 100%;
+        width: calc(100% +60px);
         flex-direction: column-reverse;
         min-width: 100%;
         display: flex;
@@ -2824,22 +2825,40 @@ body.noscroll {
     .slider__container {
         max-height: 687px;
         min-height: 350px;
+        width: calc(100% + 60px);
         overflow-x: scroll;
         display: flex;
-        gap: 20px;
+        gap: 50px;
+        position: relative;
+        left: -30px;
+        padding: 0 30px;
     }
     .pagination__slide, .pagination__arrow {
         display: none;
     }
     .menu__container {
         margin-top: 30px;
+        position: relative;
+        min-height: 430px;
+      }
+      .menu__novelty {
+        width: calc(100% + 60px);
+        height: 370px;
+        overflow: hidden;
+        position: absolute;
+        left: -30px;
+        top: 30px;
+        overflow-x: scroll;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
       }
     .novelty-slider {
         display: flex;
         justify-content: flex-start;
         gap: 20px;
-        width: 100%;
-        padding-bottom: 20px;
+        height: 400px;
+        width: calc(100% + 60px);
+        padding: 0 30px 20px 30px;
         overflow-x: scroll;
         scrollbar-width: none;
         -ms-overflow-style: none;
