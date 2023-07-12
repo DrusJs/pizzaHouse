@@ -538,7 +538,7 @@ body.noscroll {
     display: flex;
     overflow: hidden;
     scroll-snap-type: x mandatory;
-    scroll-padding: 0 20px;
+    scroll-padding: 0 10px;
     scrollbar-width: none;
     -ms-overflow-style: none;
 }

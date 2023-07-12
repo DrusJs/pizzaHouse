@@ -273,7 +273,15 @@ function setActionsCards() {
 }
 
 setActionsCards();
+let pg = 0;
 let slider = document.querySelector(".slider__container");
+slider.addEventListener('scroll', function() {
+    if (Math.trunc(slider.scrollLeft / 310) != pg) {
+        pg = Math.trunc(slider.scrollLeft / 310);
+        document.querySelector(".slidepag .dot-page.active").classList.remove("active");
+        document.querySelectorAll(".slidepag .dot-page")[pg].classList.add("active");
+    }
+});
 document.getElementById("main-next").addEventListener("click", () => {
     let act = document.querySelector(".pagination__slide-button.active");
     let actSlide = document.querySelector(".slider__slide.active");
