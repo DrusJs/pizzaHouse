@@ -169,7 +169,10 @@ document.addEventListener("DOMContentLoaded", function () {
 let intSlider;
 
 function setIntervalSlider() {
-    intSlider = setInterval(()=>{document.getElementById("main-next").click()}, 3500)
+    intSlider = setInterval(()=>{
+        if (window.matchMedia('(max-width: 750px)').matches) {return}
+        document.getElementById("main-next").click()
+    }, 3500)
 }
 setIntervalSlider()
 function setActionsCards() {
