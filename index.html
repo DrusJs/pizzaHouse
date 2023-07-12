@@ -102,18 +102,26 @@
                 </ul>
               </a>              
             </ul>
-            <a class="header__basket empty" id="basket-button" href="/pizzabasket/">
+            <a class="header__basket" id="basket-button" href="/pizzabasket/">
               Корзина
-              <span class="header__basket-amount">0</span>
+              <span class="header__basket-amount">1</span>
             </a>
           </div>
         </div>
       </header>
       <main class="main high">
         <div class="slidepag">
+          <div class="pages-mobile">
+            <div class="dot-page active" data-slide="1"></div>
+            <div class="dot-page" data-slide="2"></div>
+            <div class="dot-page" data-slide="3"></div>
+            <div class="dot-page" data-slide="4"></div>
+            <div class="dot-page" data-slide="5"></div>
+            <div class="dot-page" data-slide="6"></div>
+          </div>
           <div class="slider__container">
             <!-- Sliders -->
-            <div class="slider__slide">
+            <div class="slider__slide active" data-slide="1">
                 <div class="slide__description">
                   <h1 class="slide__header">
                     Закажи онлайн 3 пиццы и получи <span class="red">скидку 10%</span>
@@ -126,10 +134,10 @@
                 <img class="slide__preview" src="images/slidePrevieww.png" alt="Слайд">
             </div>
             <!-- Sliders -->
-            <div class="slider__slide">
+            <div class="slider__slide" data-slide="2">
               <div class="slide__description">
                 <h1 class="slide__header">
-                  2 <span class="red">скидку 10%</span>
+                  2Закажи онлайн <span class="red">скидку 10%</span>
                 </h1>
                 <p class="slide__pharagraph">
                   Скидка распространяется только на покупку пицц одного размера.</br>
@@ -138,10 +146,10 @@
               </div>
               <img class="slide__preview" src="images/slidePrevieww.png" alt="Слайд">
             </div>
-            <div class="slider__slide">
+            <div class="slider__slide" data-slide="3">
               <div class="slide__description">
                 <h1 class="slide__header">
-                  3 <span class="red">скидку 10%</span>
+                  3Закажи онлайн <span class="red">скидку 10%</span>
                 </h1>
                 <p class="slide__pharagraph">
                   Скидка распространяется только на покупку пицц одного размера.</br>
@@ -150,10 +158,10 @@
               </div>
               <img class="slide__preview" src="images/slidePrevieww.png" alt="Слайд">
             </div>
-            <div class="slider__slide">
+            <div class="slider__slide"data-slide="4">
               <div class="slide__description">
                 <h1 class="slide__header">
-                  4 <span class="red">скидку 10%</span>
+                  4Закажи онлайн <span class="red">скидку 10%</span>
                 </h1>
                 <p class="slide__pharagraph">
                   Скидка распространяется только на покупку пицц одного размера.</br>
@@ -162,10 +170,10 @@
               </div>
               <img class="slide__preview" src="images/slidePrevieww.png" alt="Слайд">
             </div>
-            <div class="slider__slide">
+            <div class="slider__slide" data-slide="5">
               <div class="slide__description">
                 <h1 class="slide__header">
-                  5 <span class="red">скидку 10%</span>
+                  5Закажи онлайн <span class="red">скидку 10%</span>
                 </h1>
                 <p class="slide__pharagraph">
                   Скидка распространяется только на покупку пицц одного размера.</br>
@@ -174,10 +182,10 @@
               </div>
               <img class="slide__preview" src="images/slidePrevieww.png" alt="Слайд">
             </div>
-            <div class="slider__slide">
+            <div class="slider__slide" data-slide="6">
               <div class="slide__description">
                 <h1 class="slide__header">
-                  6 <span class="red">скидку 10%</span>
+                  6Закажи онлайн <span class="red">скидку 10%</span>
                 </h1>
                 <p class="slide__pharagraph">
                   Скидка распространяется только на покупку пицц одного размера.</br>
@@ -189,30 +197,30 @@
             <!-- Sliders -->
           </div>
           <div class="slider__pagination">
-            <div class="pagination__silde">
-              <div class="pagination__silde-button active">
+            <div class="pagination__slide">
+              <div class="pagination__slide-button active" data-slide="1">
                 <img src="images/slide1.png" alt="1">
-                <div class="silde-button__active-line"></div>
+                <div class="slide-button__active-line"></div>
               </div>
-              <div class="pagination__silde-button">
+              <div class="pagination__slide-button" data-slide="2">
                 <img src="images/slide2.png" alt="2">
-                <div class="silde-button__active-line"></div>
+                <div class="slide-button__active-line"></div>
               </div>
-              <div class="pagination__silde-button">
+              <div class="pagination__slide-button" data-slide="3">
                 <img src="images/slide3.png" alt="3">
-                <div class="silde-button__active-line"></div>
+                <div class="slide-button__active-line"></div>
               </div>
-              <div class="pagination__silde-button">
+              <div class="pagination__slide-button" data-slide="4">
                 <img src="images/slide2.png" alt="4">
-                <div class="silde-button__active-line"></div>
+                <div class="slide-button__active-line"></div>
               </div>
-              <div class="pagination__silde-button">
+              <div class="pagination__slide-button" data-slide="5">
                 <img src="images/slide3.png" alt="5">
-                <div class="silde-button__active-line"></div>
+                <div class="slide-button__active-line"></div>
               </div>
-              <div class="pagination__silde-button">
+              <div class="pagination__slide-button" data-slide="6">
                 <img src="images/slide1.png" alt="6">
-                <div class="silde-button__active-line"></div>
+                <div class="slide-button__active-line"></div>
               </div>
             </div>
             <div class="pagination__arrow">
@@ -253,8 +261,8 @@
                         <div class="card-pizza__form-row">
                             <input type="radio" id="card-pizza__radio-two1" name="select_size">
                             <label for="card-pizza__radio-two1" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
-                            <button class="card-pizza__focus_btn">пышное</button>
-                            <button class="card-pizza__select_btn">тонкое</button>
+                            <div class="card-pizza__focus_btn active">пышное</div>
+                            <div class="card-pizza__select_btn">тонкое</div>
                         </div>
                     </form>
                     <button class="card-pizza_cart-btn item-card__btn">
@@ -280,8 +288,8 @@
                         <div class="card-pizza__form-row">
                             <input type="radio" id="card-pizza__radio-two2" name="select_size">
                             <label for="card-pizza__radio-two2" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
-                            <button class="card-pizza__focus_btn">пышное</button>
-                            <button class="card-pizza__select_btn">тонкое</button>
+                            <div class="card-pizza__focus_btn active">пышное</div>
+                            <div class="card-pizza__select_btn">тонкое</div>
                         </div>
                     </form>
                     <button class="card-pizza_cart-btn item-card__btn">
@@ -307,8 +315,35 @@
                         <div class="card-pizza__form-row">
                             <input type="radio" id="card-pizza__radio-two3" name="select_size">
                             <label for="card-pizza__radio-two3" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
-                            <button class="card-pizza__focus_btn">пышное</button>
-                            <button class="card-pizza__select_btn">тонкое</button>
+                            <div class="card-pizza__focus_btn active">пышное</div>
+                            <div class="card-pizza__select_btn">тонкое</div>
+                        </div>
+                    </form>
+                    <button class="card-pizza_cart-btn item-card__btn">
+                      <div class="cart-btn__inc minus">&ndash;</div>
+                      790 &#8381;
+                      <div class="cart-btn__inc plus">+</div>
+                      <div class="cart-btn__multy">x<span>1</span></div>
+                    </button>
+                </div>
+              </div>
+              <div class="card-pizza">
+                <img class="card-pizza__img" src="images/pizzaCard.png" alt="pizza">
+                <div class="card-pizza__top-circle"></div>
+                <div class="card-pizza__top-circle"></div>
+                <div class="card-pizza__container">
+                    <p class="card-title">4 сезона</p>
+                    <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>  
+                    <form action="" class="card-pizza__form">
+                        <div class="card-pizza__form-row">
+                            <input type="radio" id="card-pizza__radio-one3" name="select_size" checked>
+                            <label for="card-pizza__radio-one3" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><div class="card-pizza__btn">+ ингредиенты</div>
+                        </div>
+                        <div class="card-pizza__form-row">
+                            <input type="radio" id="card-pizza__radio-two3" name="select_size">
+                            <label for="card-pizza__radio-two3" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
+                            <div class="card-pizza__focus_btn active">пышное</div>
+                            <div class="card-pizza__select_btn">тонкое</div>
                         </div>
                     </form>
                     <button class="card-pizza_cart-btn item-card__btn">
@@ -324,6 +359,18 @@
               <svg width="11" height="19" viewBox="0 0 11 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.94643 18.2214L1.94696 18.2209L10.3714 9.82145C10.3715 9.82141 10.3715 9.82137 10.3715 9.82133C10.4267 9.76611 10.4538 9.7189 10.4675 9.68064C10.4883 9.62311 10.5004 9.55669 10.5 9.4775V9.475C10.5 9.39415 10.4876 9.32602 10.4667 9.26697C10.4538 9.2307 10.4278 9.1846 10.3726 9.12973L10.3714 9.12855L1.94643 0.703553C1.813 0.570118 1.6513 0.5 1.42498 0.5C1.2091 0.5 1.03584 0.571251 0.878539 0.728553C0.715994 0.891098 0.649985 1.05794 0.649985 1.25C0.649985 1.44206 0.715994 1.6089 0.878539 1.77145L8.22854 9.12145L8.58209 9.475L8.22854 9.82855L0.878539 17.1786C0.742719 17.3144 0.674985 17.4732 0.674985 17.688C0.674985 17.8924 0.743715 18.062 0.903067 18.221L0.903539 18.2214C1.06608 18.384 1.23293 18.45 1.42498 18.45C1.61704 18.45 1.78389 18.384 1.94643 18.2214Z" fill="#E0E0E0" stroke="#BDBDBD"/>
               </svg>                  
+            </div>
+            <div class="novelty-pages">
+              <div class="pages-desc">
+                <div class="dot-page active"></div>
+                <div class="dot-page"></div>
+              </div>
+              <div class="pages-mobile">
+                <div class="dot-page active"></div>
+                <div class="dot-page"></div>
+                <div class="dot-page"></div>
+                <div class="dot-page"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -362,8 +409,8 @@
                       <div class="card-pizza__form-row">
                           <input type="radio" id="card-pizza__radio-two4" name="select_size">
                           <label for="card-pizza__radio-two4" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
-                          <button class="card-pizza__focus_btn">пышное</button>
-                          <button class="card-pizza__select_btn">тонкое</button>
+                          <div class="card-pizza__focus_btn active">пышное</div>
+                          <div class="card-pizza__select_btn">тонкое</div>
                       </div>
                   </form>
                   <button class="card-pizza_cart-btn item-card__btn">
@@ -389,8 +436,8 @@
                       <div class="card-pizza__form-row">
                           <input type="radio" id="card-pizza__radio-two5" name="select_size">
                           <label for="card-pizza__radio-two5" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
-                          <button class="card-pizza__focus_btn">пышное</button>
-                          <button class="card-pizza__select_btn">тонкое</button>
+                          <div class="card-pizza__focus_btn active">пышное</div>
+                          <div class="card-pizza__select_btn">тонкое</div>
                       </div>
                   </form>
                   <button class="card-pizza_cart-btn item-card__btn">
@@ -416,8 +463,8 @@
                       <div class="card-pizza__form-row">
                           <input type="radio" id="card-pizza__radio-two6" name="select_size">
                           <label for="card-pizza__radio-two6" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
-                          <button class="card-pizza__focus_btn">пышное</button>
-                          <button class="card-pizza__select_btn">тонкое</button>
+                          <div class="card-pizza__focus_btn active">пышное</div>
+                          <div class="card-pizza__select_btn">тонкое</div>
                       </div>
                   </form>
                   <button class="card-pizza_cart-btn item-card__btn">
@@ -443,8 +490,8 @@
                       <div class="card-pizza__form-row">
                           <input type="radio" id="card-pizza__radio-two7" name="select_size">
                           <label for="card-pizza__radio-two7" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
-                          <button class="card-pizza__focus_btn">пышное</button>
-                          <button class="card-pizza__select_btn">тонкое</button>
+                          <div class="card-pizza__focus_btn active">пышное</div>
+                          <div class="card-pizza__select_btn">тонкое</div>
                       </div>
                   </form>
                   <button class="card-pizza_cart-btn item-card__btn">
@@ -470,8 +517,8 @@
                       <div class="card-pizza__form-row">
                           <input type="radio" id="card-pizza__radio-two8" name="select_size">
                           <label for="card-pizza__radio-two8" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
-                          <button class="card-pizza__focus_btn">пышное</button>
-                          <button class="card-pizza__select_btn">тонкое</button>
+                          <div class="card-pizza__focus_btn active">пышное</div>
+                          <div class="card-pizza__select_btn">тонкое</div>
                       </div>
                   </form>
                   <button class="card-pizza_cart-btn item-card__btn">
@@ -497,8 +544,8 @@
                       <div class="card-pizza__form-row">
                           <input type="radio" id="card-pizza__radio-two9" name="select_size">
                           <label for="card-pizza__radio-two9" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
-                          <button class="card-pizza__focus_btn">пышное</button>
-                          <button class="card-pizza__select_btn">тонкое</button>
+                          <div class="card-pizza__focus_btn active">пышное</div>
+                          <div class="card-pizza__select_btn">тонкое</div>
                       </div>
                   </form>
                   <button class="card-pizza_cart-btn item-card__btn">
@@ -524,8 +571,8 @@
                       <div class="card-pizza__form-row">
                           <input type="radio" id="card-pizza__radio-two10" name="select_size">
                           <label for="card-pizza__radio-two10" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
-                          <button class="card-pizza__focus_btn">пышное</button>
-                          <button class="card-pizza__select_btn">тонкое</button>
+                          <div class="card-pizza__focus_btn active">пышное</div>
+                          <div class="card-pizza__select_btn">тонкое</div>
                       </div>
                   </form>
                   <button class="card-pizza_cart-btn item-card__btn">
@@ -551,8 +598,8 @@
                       <div class="card-pizza__form-row">
                           <input type="radio" id="card-pizza__radio-two11" name="select_size">
                           <label for="card-pizza__radio-two11" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
-                          <button class="card-pizza__focus_btn">пышное</button>
-                          <button class="card-pizza__select_btn">тонкое</button>
+                          <div class="card-pizza__focus_btn active">пышное</div>
+                          <div class="card-pizza__select_btn">тонкое</div>
                       </div>
                   </form>
                   <button class="card-pizza_cart-btn item-card__btn">
@@ -578,8 +625,8 @@
                       <div class="card-pizza__form-row">
                           <input type="radio" id="card-pizza__radio-two12" name="select_size">
                           <label for="card-pizza__radio-two12" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
-                          <button class="card-pizza__focus_btn">пышное</button>
-                          <button class="card-pizza__select_btn">тонкое</button>
+                          <div class="card-pizza__focus_btn active">пышное</div>
+                          <div class="card-pizza__select_btn">тонкое</div>
                       </div>
                   </form>
                   <button class="card-pizza_cart-btn item-card__btn">
@@ -605,8 +652,8 @@
                       <div class="card-pizza__form-row">
                           <input type="radio" id="card-pizza__radio-two13" name="select_size">
                           <label for="card-pizza__radio-two13" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
-                          <button class="card-pizza__focus_btn">пышное</button>
-                          <button class="card-pizza__select_btn">тонкое</button>
+                          <div class="card-pizza__focus_btn active">пышное</div>
+                          <div class="card-pizza__select_btn">тонкое</div>
                       </div>
                   </form>
                   <button class="card-pizza_cart-btn item-card__btn">
@@ -632,8 +679,8 @@
                       <div class="card-pizza__form-row">
                           <input type="radio" id="card-pizza__radio-two14" name="select_size">
                           <label for="card-pizza__radio-two14" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
-                          <button class="card-pizza__focus_btn">пышное</button>
-                          <button class="card-pizza__select_btn">тонкое</button>
+                          <div class="card-pizza__focus_btn active">пышное</div>
+                          <div class="card-pizza__select_btn">тонкое</div>
                       </div>
                   </form>
                   <button class="card-pizza_cart-btn item-card__btn">
@@ -659,8 +706,8 @@
                       <div class="card-pizza__form-row">
                           <input type="radio" id="card-pizza__radio-two15" name="select_size">
                           <label for="card-pizza__radio-two15" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
-                          <button class="card-pizza__focus_btn">пышное</button>
-                          <button class="card-pizza__select_btn">тонкое</button>
+                          <div class="card-pizza__focus_btn active">пышное</div>
+                          <div class="card-pizza__select_btn">тонкое</div>
                       </div>
                   </form>
                   <button class="card-pizza_cart-btn item-card__btn">
@@ -686,8 +733,8 @@
                       <div class="card-pizza__form-row">
                           <input type="radio" id="card-pizza__radio-two16" name="select_size">
                           <label for="card-pizza__radio-two16" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
-                          <button class="card-pizza__focus_btn">пышное</button>
-                          <button class="card-pizza__select_btn">тонкое</button>
+                          <div class="card-pizza__focus_btn active">пышное</div>
+                          <div class="card-pizza__select_btn">тонкое</div>
                       </div>
                   </form>
                   <button class="card-pizza_cart-btn item-card__btn">
@@ -713,8 +760,8 @@
                       <div class="card-pizza__form-row">
                           <input type="radio" id="card-pizza__radio-two17" name="select_size">
                           <label for="card-pizza__radio-two17" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
-                          <button class="card-pizza__focus_btn">пышное</button>
-                          <button class="card-pizza__select_btn">тонкое</button>
+                          <div class="card-pizza__focus_btn active">пышное</div>
+                          <div class="card-pizza__select_btn">тонкое</div>
                       </div>
                   </form>
                   <button class="card-pizza_cart-btn item-card__btn">
@@ -740,8 +787,8 @@
                       <div class="card-pizza__form-row">
                           <input type="radio" id="card-pizza__radio-two18" name="select_size">
                           <label for="card-pizza__radio-two18" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
-                          <button class="card-pizza__focus_btn">пышное</button>
-                          <button class="card-pizza__select_btn">тонкое</button>
+                          <div class="card-pizza__focus_btn active">пышное</div>
+                          <div class="card-pizza__select_btn">тонкое</div>
                       </div>
                   </form>
                   <button class="card-pizza_cart-btn item-card__btn">
@@ -767,8 +814,8 @@
                       <div class="card-pizza__form-row">
                           <input type="radio" id="card-pizza__radio-two19" name="select_size">
                           <label for="card-pizza__radio-two19" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
-                          <button class="card-pizza__focus_btn">пышное</button>
-                          <button class="card-pizza__select_btn">тонкое</button>
+                          <div class="card-pizza__focus_btn active">пышное</div>
+                          <div class="card-pizza__select_btn">тонкое</div>
                       </div>
                   </form>
                   <button class="card-pizza_cart-btn item-card__btn">
@@ -794,8 +841,8 @@
                       <div class="card-pizza__form-row">
                           <input type="radio" id="card-pizza__radio-two20" name="select_size">
                           <label for="card-pizza__radio-two20" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
-                          <button class="card-pizza__focus_btn">пышное</button>
-                          <button class="card-pizza__select_btn">тонкое</button>
+                          <div class="card-pizza__focus_btn active">пышное</div>
+                          <div class="card-pizza__select_btn">тонкое</div>
                       </div>
                   </form>
                   <button class="card-pizza_cart-btn item-card__btn">
@@ -821,8 +868,8 @@
                       <div class="card-pizza__form-row">
                           <input type="radio" id="card-pizza__radio-two21" name="select_size">
                           <label for="card-pizza__radio-two21" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
-                          <button class="card-pizza__focus_btn">пышное</button>
-                          <button class="card-pizza__select_btn">тонкое</button>
+                          <div class="card-pizza__focus_btn active">пышное</div>
+                          <div class="card-pizza__select_btn">тонкое</div>
                       </div>
                   </form>
                   <button class="card-pizza_cart-btn item-card__btn">
@@ -848,8 +895,8 @@
                       <div class="card-pizza__form-row">
                           <input type="radio" id="card-pizza__radio-two22" name="select_size">
                           <label for="card-pizza__radio-two22" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
-                          <button class="card-pizza__focus_btn">пышное</button>
-                          <button class="card-pizza__select_btn">тонкое</button>
+                          <div class="card-pizza__focus_btn active">пышное</div>
+                          <div class="card-pizza__select_btn">тонкое</div>
                       </div>
                   </form>
                   <button class="card-pizza_cart-btn item-card__btn">
@@ -875,8 +922,8 @@
                       <div class="card-pizza__form-row">
                           <input type="radio" id="card-pizza__radio-two23" name="select_size">
                           <label for="card-pizza__radio-two23" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
-                          <button class="card-pizza__focus_btn">пышное</button>
-                          <button class="card-pizza__select_btn">тонкое</button>
+                          <div class="card-pizza__focus_btn active">пышное</div>
+                          <div class="card-pizza__select_btn">тонкое</div>
                       </div>
                   </form>
                   <button class="card-pizza_cart-btn item-card__btn">
@@ -902,8 +949,8 @@
                       <div class="card-pizza__form-row">
                           <input type="radio" id="card-pizza__radio-two24" name="select_size">
                           <label for="card-pizza__radio-two24" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
-                          <button class="card-pizza__focus_btn">пышное</button>
-                          <button class="card-pizza__select_btn">тонкое</button>
+                          <div class="card-pizza__focus_btn active">пышное</div>
+                          <div class="card-pizza__select_btn">тонкое</div>
                       </div>
                   </form>
                   <button class="card-pizza_cart-btn item-card__btn">
@@ -929,8 +976,8 @@
                       <div class="card-pizza__form-row">
                           <input type="radio" id="card-pizza__radio-two25" name="select_size">
                           <label for="card-pizza__radio-two25" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
-                          <button class="card-pizza__focus_btn">пышное</button>
-                          <button class="card-pizza__select_btn">тонкое</button>
+                          <div class="card-pizza__focus_btn active">пышное</div>
+                          <div class="card-pizza__select_btn">тонкое</div>
                       </div>
                   </form>
                   <button class="card-pizza_cart-btn item-card__btn">
@@ -956,8 +1003,8 @@
                       <div class="card-pizza__form-row">
                           <input type="radio" id="card-pizza__radio-two26" name="select_size">
                           <label for="card-pizza__radio-two26" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
-                          <button class="card-pizza__focus_btn">пышное</button>
-                          <button class="card-pizza__select_btn">тонкое</button>
+                          <div class="card-pizza__focus_btn active">пышное</div>
+                          <div class="card-pizza__select_btn">тонкое</div>
                       </div>
                   </form>
                   <button class="card-pizza_cart-btn item-card__btn">
@@ -983,8 +1030,8 @@
                       <div class="card-pizza__form-row">
                           <input type="radio" id="card-pizza__radio-two27" name="select_size">
                           <label for="card-pizza__radio-two27" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
-                          <button class="card-pizza__focus_btn">пышное</button>
-                          <button class="card-pizza__select_btn">тонкое</button>
+                          <div class="card-pizza__focus_btn active">пышное</div>
+                          <div class="card-pizza__select_btn">тонкое</div>
                       </div>
                   </form>
                   <button class="card-pizza_cart-btn item-card__btn">
@@ -1260,6 +1307,38 @@
         </div>
       </footer>
     </div>
+    <div class="modal-wrapper light" id="modal-pizza">
+      <div class="modal">
+        <img class="modal__close-button" src="images/modalClose.svg" alt="">
+        <div class="item-card">
+          <img class="card-pizza__img" src="images/pizzaCard.png" alt="pizza">
+          <div class="card-pizza__top-circle"></div>
+          <div class="card-pizza__top-circle"></div>
+          <div class="card-pizza__container">
+              <p class="card-title">Креветка бекон</p>
+              <p class="card-desc">Сыр Моцарелла, Соус Сливочный, Сыр Чеддер, Курица, Помидоры, Орегано</p>  
+              <form action="" class="card-pizza__form">
+                  <div class="card-pizza__form-row">
+                      <input type="radio" id="card-pizza__radio-one0" name="select_size" checked>
+                      <label for="card-pizza__radio-one1" class="card-pizza__label">36 см</label> <p class="card-pizza__desc">800г</p><div class="card-pizza__btn">+ ингредиенты</div>
+                  </div>
+                  <div class="card-pizza__form-row">
+                      <input type="radio" id="card-pizza__radio-two0" name="select_size">
+                      <label for="card-pizza__radio-two1" class="card-pizza__label">25 см</label><p class="card-pizza__desc">460г</p>
+                      <div class="card-pizza__focus_btn active">пышное</div>
+                      <div class="card-pizza__select_btn">тонкое</div>
+                  </div>
+              </form>
+              <button class="card-pizza_cart-btn item-card__btn active">
+                <div class="cart-btn__inc minus">&ndash;</div>
+                790 &#8381;
+                <div class="cart-btn__inc plus">+</div>
+                <div class="cart-btn__multy">x<span>1</span></div>
+              </button>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="modal-wrapper" id="modal-register">
       <div class="modal">
         <img class="modal__close-button" src="images/modalClose.svg" alt="">
@@ -1288,22 +1367,22 @@
                   <p class="reg-label reg-label__city">Ваш город *</p>
 
                   <div class="modal-reg__row-city">
-                      <input class="input__radio" type="radio" id="reg-jel" name="city">
+                      <input class="input__radio" type="radio" id="reg-jel" name="city" checked="checked">
                       <label class="reg-label__radio" for="reg-jel">Железнодорожный</label>
                       <input class="input__radio" type="radio" id="reg-bal" name="city">
                       <label class="reg-label__radio" for="reg-bal">Балашиха</label>
                       <input class="input__radio" type="radio" id="reg-mos" name="city">
                       <label class="reg-label__radio" for="reg-mos">Москва</label>
                       <input class="input__radio" type="radio" id="reg-him" name="city">
-                      <label class="reg-label__radio" for="reg-him">Химки</label><br>
+                      <label class="reg-label__radio" for="reg-him">Химки</label>
                       <input class="input__radio" type="radio" id="reg-zhuk" name="city">
                       <label class="reg-label__radio" for="reg-zhuk">Жуковский</label>
                       <input class="input__radio" type="radio" id="reg-dzer" name="city">
-                      <label class="reg-label__radio" for="reg-dzer">Дзержинский</label><br>
+                      <label class="reg-label__radio" for="reg-dzer">Дзержинский</label>
                       <input class="input__radio" type="radio" id="reg-dolg" name="city">
                       <label class="reg-label__radio" for="reg-dolg">Долгопрудный</label>
                       <input class="input__radio" type="radio" id="reg-lub" name="city">
-                      <label class="reg-label__radio" for="reg-lub">Люберцы</label><br>
+                      <label class="reg-label__radio" for="reg-lub">Люберцы</label>
                       <input class="input__radio" type="radio" id="reg-zhul" name="city">
                       <label class="reg-label__radio" for="reg-zhul">Жулебино</label>
                       <input class="input__radio" type="radio" id="reg-nek" name="city">
@@ -1335,7 +1414,7 @@
 
               <div class="modal-reg__row modal-reg-termofuse">
                   <input class="checkbox checbox-termofuse" type="checkbox" id="policy" checked>
-                  <label for="policy" class="modal__desc reg-desc">Соглашаюсь с условиями обработки персональных данных</label>
+                  <label for="policy" class="modal__desc reg-desc">Соглашаюсь с <span class="modal__link reg-link">Условиями</span> обработки персональных данных</label>
               </div>
 
               <div class="form__complete-block reg-complete-block">
@@ -1426,8 +1505,8 @@
                 </button>
                 <div class="row">
                   <p>тесто:</p>
-                  <button class="card-pizza__focus_btn">пышное</button>
-                  <button class="card-pizza__select_btn">тонкое</button>
+                  <div class="card-pizza__focus_btn active">пышное</div>
+                  <div class="card-pizza__select_btn">тонкое</div>
                 </div>
                 <button class="sumbit-btn disabled">В КОРЗИНУ</button>
               </div>

@@ -177,6 +177,20 @@ function setActionsCards() {
             }
         });
     });
+    document.querySelectorAll(".card-pizza .card-pizza_cart-btn").forEach(el => {
+        el.addEventListener("click", (e) => {
+            if (window.matchMedia('(max-width: 750px)').matches) {
+                document.getElementById("modal-pizza").classList.add("active");
+                document.body.classList.add("noscroll");
+                return;
+            }
+            if (e.target.classList.contains("card-pizza_cart-btn")){
+                e.currentTarget.classList.add("active");
+                document.querySelector(".header__basket").classList.remove("empty");
+                document.querySelector(".header__basket-amount").innerHTML = +document.querySelector(".header__basket-amount").innerHTML + 1;
+            }
+        });
+    });
     document.querySelectorAll(".cart-btn__inc.plus").forEach(el => {
         el.addEventListener("click", (e) => {
             let multy = e.currentTarget.nextElementSibling.firstElementChild.innerHTML;
@@ -234,31 +248,61 @@ function setActionsCards() {
             el.firstElementChild.nextElementSibling.innerHTML = 0;
         });
     });
+    document.querySelectorAll(".card-pizza__focus_btn").forEach(el => {
+        el.addEventListener("click", (e)=>{
+            if (!e.currentTarget.classList.contains("actuve")) {
+            e.currentTarget.classList.add("active");
+            e.currentTarget.nextElementSibling.classList.remove("active");   
+            }  
+        })
+    })
+    document.querySelectorAll(".card-pizza__select_btn").forEach(el => {
+        el.addEventListener("click", (e)=>{
+            if (!e.currentTarget.classList.contains("actuve")) {
+            e.currentTarget.classList.add("active");
+            e.currentTarget.previousElementSibling.classList.remove("active");
+            }     
+        })
+    })
 }
 
 setActionsCards();
 let slider = document.querySelector(".slider__container");
-slider.scrollLeft = 0;
 document.getElementById("main-next").addEventListener("click", () => {
-    let act = document.querySelector(".pagination__silde-button.active");
+    let act = document.querySelector(".pagination__slide-button.active");
+    let actSlide = document.querySelector(".slider__slide.active");
     act.classList.remove("active");
-    if (slider.scrollLeft+slider.clientWidth == slider.scrollWidth) {
-        slider.scrollLeft = 0;
-        document.querySelector(".pagination__silde").firstElementChild.classList.add("active");
+    actSlide.classList.remove("active");
+    console.log(actSlide.dataset.slide);
+    if (actSlide.dataset.slide == "6") {
+        slider.firstElementChild.classList.add("active");
+        document.querySelector(".pagination__slide").firstElementChild.classList.add("active");
     } else {
-        slider.scrollLeft = slider.scrollLeft + slider.clientWidth;
+        actSlide.nextElementSibling.classList.add("active");
         act.nextElementSibling.classList.add("active");
     }
 })
 document.getElementById("main-prev").addEventListener("click", () => {
-    let act = document.querySelector(".pagination__silde-button.active");
+    let act = document.querySelector(".pagination__slide-button.active");
+    let actSlide = document.querySelector(".slider__slide.active");
     act.classList.remove("active");
-    if (slider.scrollLeft == 0) {
-        slider.scrollLeft = slider.scrollWidth;
-        document.querySelector(".pagination__silde").lastElementChild.classList.add("active");
+    actSlide.classList.remove("active");
+    if (actSlide.dataset.slide == "1") {
+        slider.lastElementChild.classList.add("active");
+        document.querySelector(".pagination__slide").lastElementChild.classList.add("active");
     } else {
-        slider.scrollLeft = slider.scrollLeft - slider.clientWidth;
+        actSlide.previousElementSibling.classList.add("active");
         act.previousElementSibling.classList.add("active");
     }
+})
+document.querySelectorAll(".pagination__slide-button").forEach(el => {
+    el.addEventListener("click", (e)=>{
+        document.querySelector(".pagination__slide-button.active").classList.remove("active");
+        e.currentTarget.classList.add("active");
+        let mul = e.currentTarget.dataset.slide-1;
+        document.querySelector(".slider__slide.active").classList.remove("active");
+        document.getElementsByClassName("slider__slide")[mul].classList.add("active");
+        
+    })
 })
 
