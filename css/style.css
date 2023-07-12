@@ -537,7 +537,8 @@ body.noscroll {
     position: relative;
     display: flex;
     overflow: hidden;
-    transition: 500ms;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 0 20px;
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
@@ -554,21 +555,22 @@ body.noscroll {
     left: 0;
 }
 .slider__slide {
+    scroll-snap-align: start;
     width: 100%;
-    max-width: 0;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     gap: 30px;
     position: absolute;
     top: 0;
-    left: -100%;
+    left: 0;
+    transform: translate(-1600px,0px);
     opacity: 0;
-    transition: 500ms;
+    transition: 600ms;
     background-color: #FCFCFC;
 }
 .slider__slide.active {
-    left: 0;
+    transform: translate(0px,0px);
     max-width: 100%;
     opacity: 1;
 }
@@ -2800,11 +2802,13 @@ body.noscroll {
         top: 0;
         left: none;
         opacity: 1;
+        transform: translate(0px,0px);
     }
     .slider__slide.active {
         left: 0;
         max-width: 100%;
         opacity: 1;
+        transform: translate(0px,0px);
     }
     .slider__container {
         max-height: 687px;

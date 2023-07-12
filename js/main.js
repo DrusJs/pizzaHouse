@@ -166,7 +166,12 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 });
+let intSlider;
 
+function setIntervalSlider() {
+    intSlider = setInterval(()=>{document.getElementById("main-next").click()}, 3500)
+}
+setIntervalSlider()
 function setActionsCards() {
     document.querySelectorAll(".card-pizza_cart-btn").forEach(el => {
         el.addEventListener("click", (e) => {
@@ -180,6 +185,7 @@ function setActionsCards() {
     document.querySelectorAll(".card-pizza .card-pizza_cart-btn").forEach(el => {
         el.addEventListener("click", (e) => {
             if (window.matchMedia('(max-width: 750px)').matches) {
+
                 document.getElementById("modal-pizza").classList.add("active");
                 document.body.classList.add("noscroll");
                 return;
@@ -281,6 +287,8 @@ document.getElementById("main-next").addEventListener("click", () => {
         actSlide.nextElementSibling.classList.add("active");
         act.nextElementSibling.classList.add("active");
     }
+    clearInterval(intSlider);
+    setIntervalSlider() 
 })
 document.getElementById("main-prev").addEventListener("click", () => {
     let act = document.querySelector(".pagination__slide-button.active");
@@ -294,6 +302,8 @@ document.getElementById("main-prev").addEventListener("click", () => {
         actSlide.previousElementSibling.classList.add("active");
         act.previousElementSibling.classList.add("active");
     }
+    clearInterval(intSlider);
+    setIntervalSlider() 
 })
 document.querySelectorAll(".pagination__slide-button").forEach(el => {
     el.addEventListener("click", (e)=>{
@@ -302,7 +312,8 @@ document.querySelectorAll(".pagination__slide-button").forEach(el => {
         let mul = e.currentTarget.dataset.slide-1;
         document.querySelector(".slider__slide.active").classList.remove("active");
         document.getElementsByClassName("slider__slide")[mul].classList.add("active");
-        
+        clearInterval(intSlider);
+        setIntervalSlider()        
     })
 })
 
