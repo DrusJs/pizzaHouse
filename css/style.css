@@ -746,17 +746,33 @@ body.noscroll {
     gap: 50px;
     padding: 85px 0 30px 0;
     position: relative;
-    overflow-x: hidden;
+    overflow: hidden;
+    height: 600px;
 }
 .novelty-slider {
+    position: relative;
     display: flex;
     justify-content: flex-start;
     gap: 20px;
     width: 975px;
+    top: 30px;
     padding: 0 20px 20px 20px;
-    overflow-x: hidden;
-}
+    overflow: hidden;
+    height: 600px;
 
+}
+.novelty-slide {
+    position: absolute;
+    display: flex;
+    gap: 20px;
+    opacity: 0;
+    transform: translate(-1000px, 0);
+    transition: 500ms;
+}
+.novelty-slide.active {
+    opacity: 1;
+    transform: translate(0px, 0);
+}
 .novelty-pages {
     position: absolute;
     bottom: 0px;
@@ -2516,13 +2532,45 @@ body.noscroll {
         margin-left: 205px;
         gap: 10px;
     }
+    .menu__container {
+        margin-top: 30px;
+        position: relative;
+        min-height: 650px;
+      }
+      .menu__novelty {
+        width: calc(100% + 60px);
+        height: 600px;
+        overflow: hidden;
+        position: absolute;
+        left: -30px;
+        top: 30px;
+        overflow-x: scroll;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+      }
     .novelty-slider {
         display: flex;
         justify-content: flex-start;
         gap: 20px;
-        width: 650px;
-        padding-bottom: 20px;
-        overflow-x: hidden;
+        height: 600px;
+        width: calc(100% + 60px);
+        padding: 0 30px 20px 30px;
+        overflow-x: scroll;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+    .novelty-slider::-webkit-scrollbar { 
+        width: 0;
+        background: rgba(255, 255, 255, 0.0);
+    }
+    .pagination__arrow-prev,
+    .pagination__arrow-next {
+        display: none;
+    }
+    .novelty-slide {
+        position: relative;
+        opacity: 1;
+        transform: translate(0px, 0);
     }
 }
 
@@ -2712,14 +2760,7 @@ body.noscroll {
         max-width: 680px;
     }
 
-    .novelty-slider {
-        display: flex;
-        justify-content: flex-start;
-        gap: 20px;
-        width: 332px;
-        padding-bottom: 20px;
-        overflow-x: hidden;
-    }
+
     .basket__card {
         border-radius: 20px;
         height: 130px;

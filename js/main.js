@@ -323,6 +323,35 @@ document.getElementById("main-prev").addEventListener("click", () => {
     clearInterval(intSlider);
     setIntervalSlider() 
 })
+let novelty = document.querySelector(".novelty-slider")
+document.getElementById("novelty-next").addEventListener("click", () => {
+    let actSlide = document.querySelector(".novelty-slide.active");
+    actSlide.classList.remove("active");
+    if (actSlide.dataset.slide == "2") {
+        novelty.firstElementChild.classList.add("active");pages-desc
+        document.querySelector(".pagination__slide").firstElementChild.classList.add("active");
+        document.querySelector(".pages-desc").firstElementChild.classList.add("active");
+    } else {
+        actSlide.nextElementSibling.classList.add("active");
+        document.querySelector(".pages-desc").firstElementChild.classList.remove("active");
+        document.querySelector(".pages-desc").lastElementChild.classList.add("active");
+    }
+
+})
+document.getElementById("novelty-prev").addEventListener("click", () => {
+    let actSlide = document.querySelector(".novelty-slide.active");
+    actSlide.classList.remove("active");
+    if (actSlide.dataset.slide == "1") {
+        novelty.lastElementChild.classList.add("active");
+        document.querySelector(".pagination__slide").lastElementChild.classList.add("active");
+        document.querySelector(".pages-desc").lastElementChild.classList.add("active");
+    } else {
+        actSlide.previousElementSibling.classList.add("active");
+        document.querySelector(".pages-desc").lastElementChild.classList.remove("active");
+        document.querySelector(".pages-desc").firstElementChild.classList.add("active");
+    }
+
+})
 document.querySelectorAll(".pagination__slide-button").forEach(el => {
     el.addEventListener("click", (e)=>{
         document.querySelector(".pagination__slide-button.active").classList.remove("active");
