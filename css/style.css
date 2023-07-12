@@ -574,6 +574,11 @@ body.noscroll {
     max-width: 100%;
     opacity: 1;
 }
+.slider__slide.right {
+    transform: translate(1600px,0px);
+    max-width: 100%;
+    opacity: 0;
+}
 .slide__description {
     display: flex;
     flex-direction: column;
@@ -2805,6 +2810,12 @@ body.noscroll {
         transform: translate(0px,0px);
     }
     .slider__slide.active {
+        left: 0;
+        max-width: 100%;
+        opacity: 1;
+        transform: translate(0px,0px);
+    }
+    .slider__slide.right {
         left: 0;
         max-width: 100%;
         opacity: 1;

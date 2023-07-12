@@ -279,14 +279,15 @@ document.getElementById("main-next").addEventListener("click", () => {
     let actSlide = document.querySelector(".slider__slide.active");
     act.classList.remove("active");
     actSlide.classList.remove("active");
-    console.log(actSlide.dataset.slide);
     if (actSlide.dataset.slide == "6") {
         slider.firstElementChild.classList.add("active");
         document.querySelector(".pagination__slide").firstElementChild.classList.add("active");
     } else {
+        actSlide.classList.add("right");
         actSlide.nextElementSibling.classList.add("active");
         act.nextElementSibling.classList.add("active");
     }
+    setTimeout(()=>{actSlide.classList.remove("right")}, 600)
     clearInterval(intSlider);
     setIntervalSlider() 
 })
