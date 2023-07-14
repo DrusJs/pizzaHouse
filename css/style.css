@@ -2590,10 +2590,6 @@ body.noscroll {
         width: 0;
         background: rgba(255, 255, 255, 0.0);
     }
-    .pagination__arrow-prev,
-    .pagination__arrow-next {
-        display: none;
-    }
     .novelty-slide {
         position: relative;
         opacity: 1;
