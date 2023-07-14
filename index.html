@@ -1333,10 +1333,10 @@
                       <div class="card-pizza__select_btn">тонкое</div>
                   </div>
               </form>
-              <button class="card-pizza_cart-btn item-card__btn" id="modalbtn" onclick="CloseModalPizza()">
-                <div class="cart-btn__inc minus">&ndash;</div>
+              <button class="card-pizza_cart-btn item-card__btn" id="modalbtn" onclick="ActButton()">
+                <div class="cart-btn__inc minus" onclick="Dec()">&ndash;</div>
                 790 &#8381;
-                <div class="cart-btn__inc plus">+</div>
+                <div class="cart-btn__inc plus" onclick="Inc()">+</div>
                 <div class="cart-btn__multy">x<span id="modal-mult">1</span></div>
               </button>
           </div>

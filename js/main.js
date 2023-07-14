@@ -421,8 +421,23 @@ function setBascketCardAction() {
         });
     });
 }
+function ActButton() {
+    pizzaBtn.classList.add("active");
+    pizzaSelect.classList.add("modal-act");
+
+}
+function Dec() {    
+    if (+pizzaBtn.lastElementChild.firstElementChild.innerHTML == 1) {
+        pizzaBtn.classList.remove("active");
+        pizzaSelect.classList.remove("modal-act");
+        return;
+    }
+    pizzaBtn.lastElementChild.firstElementChild.innerHTML = +pizzaBtn.lastElementChild.firstElementChild.innerHTML - 1;
+}
+function Inc() {
+    pizzaBtn.lastElementChild.firstElementChild.innerHTML = +pizzaBtn.lastElementChild.firstElementChild.innerHTML + 1;
+}
 
 try {
-
     setBascketCardAction()
 } catch {}
