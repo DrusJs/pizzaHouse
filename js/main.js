@@ -190,7 +190,7 @@ function setActionsCards() {
                 return;
                 
             }
-            if (e.target.classList.contains("card-pizza_cart-btn")){
+            if (e.target.classList.contains("card-pizza_cart-btn") && !e.currentTarget.parentElement.parentElement.classList.contains("modal-act")){
                 e.currentTarget.classList.add("active");
                 document.querySelector(".header__basket").classList.remove("empty");
                 document.querySelector(".header__basket-amount").innerHTML = +document.querySelector(".header__basket-amount").innerHTML + 1;
