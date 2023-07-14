@@ -2529,6 +2529,10 @@ body.noscroll {
     .menu__main.start {
         justify-content: center;
       }
+      .menu__novelty .pagination__arrow-prev,
+      .menu__novelty .pagination__arrow-next {
+        display: none;
+      }
     .header__basket {
         font-size: 0px;
         width: 48px;
