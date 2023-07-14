@@ -52,14 +52,14 @@ modalWrappers.forEach(el =>{
         }
     });
 });
-
+try {
 document.querySelectorAll(".mobile-menu__list").forEach(el => {
     el.addEventListener("click", (e) => {
-        document.querySelector(".mobile-menf__list.active").classList.remove("active");
+        document.querySelector(".mobile-menu__list.active").classList.remove("active");
         e.currentTarget.classList.add("active");
     })
 })
-
+} catch {}
 modalCloseButtons.forEach(el => {
     el.addEventListener("click", (e) => {
         e.currentTarget.parentElement.parentElement.classList.remove("active");
@@ -127,7 +127,7 @@ function setActionModal() {
         });
     });
 }
-
+let pizzaSelect, pizzaBtn;
 setActionModal();
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -170,7 +170,7 @@ function setIntervalSlider() {
 function setActionsCards() {
     document.querySelectorAll(".card-pizza_cart-btn").forEach(el => {
         el.addEventListener("click", (e) => {
-            if (e.target.classList.contains("card-pizza_cart-btn")){
+            if (e.target.classList.contains("card-pizza_cart-btn") && !e.currentTarget.parentElement.parentElement.classList.contains("modal-act")){
                 e.currentTarget.classList.add("active");
                 document.querySelector(".header__basket").classList.remove("empty");
                 document.querySelector(".header__basket-amount").innerHTML = +document.querySelector(".header__basket-amount").innerHTML + 1;
@@ -179,10 +179,16 @@ function setActionsCards() {
     });
     document.querySelectorAll(".card-pizza .card-pizza_cart-btn").forEach(el => {
         el.addEventListener("click", (e) => {
-            if (window.matchMedia('(max-width: 750px)').matches) {
+            if (window.matchMedia('(max-width: 750px)').matches && !e.currentTarget.parentElement.parentElement.classList.contains("modal-act")) {
                 document.getElementById("modal-pizza").classList.add("active");
                 document.body.classList.add("noscroll");
+                pizzaSelect = ""; pizzaBtn = "";
+                pizzaSelect = e.currentTarget.parentElement.parentElement;
+                pizzaBtn = e.currentTarget;
+                document.getElementById("modalbtn").classList.remove("active");
+                e.currentTarget.classList.remove("active");
                 return;
+                
             }
             if (e.target.classList.contains("card-pizza_cart-btn")){
                 e.currentTarget.classList.add("active");
@@ -328,9 +334,10 @@ document.getElementById("novelty-next").addEventListener("click", () => {
     let actSlide = document.querySelector(".novelty-slide.active");
     actSlide.classList.remove("active");
     if (actSlide.dataset.slide == "2") {
-        novelty.firstElementChild.classList.add("active");pages-desc
+        novelty.firstElementChild.classList.add("active");
         document.querySelector(".pagination__slide").firstElementChild.classList.add("active");
         document.querySelector(".pages-desc").firstElementChild.classList.add("active");
+        document.querySelector(".pages-desc").lastElementChild.classList.remove("active");
     } else {
         actSlide.nextElementSibling.classList.add("active");
         document.querySelector(".pages-desc").firstElementChild.classList.remove("active");
@@ -345,6 +352,7 @@ document.getElementById("novelty-prev").addEventListener("click", () => {
         novelty.lastElementChild.classList.add("active");
         document.querySelector(".pagination__slide").lastElementChild.classList.add("active");
         document.querySelector(".pages-desc").lastElementChild.classList.add("active");
+        document.querySelector(".pages-desc").firstElementChild.classList.remove("active");
     } else {
         actSlide.previousElementSibling.classList.add("active");
         document.querySelector(".pages-desc").lastElementChild.classList.remove("active");
@@ -369,7 +377,7 @@ if (window.matchMedia('(max-width: 750px)').matches) {
 }
 } catch {}
 try {
-    const profilenav = document.querySelectorAll(".profile-nav__list");
+const profilenav = document.querySelectorAll(".profile-nav__list");
 const profilecontent = document.querySelectorAll(".profile__container-page");
 for (let i = 0; i < 2; i++) {
     profilenav[i].addEventListener("click", (e) => {
@@ -391,13 +399,13 @@ function setBascketCardAction() {
     document.querySelectorAll(".dark .counter__inc.plus").forEach(el => {
         el.addEventListener("click", (e) => {
             let multy = e.currentTarget.previousElementSibling.innerHTML;
-            e.currentTarget.previousElementSibling.innerHTML = +multy+1;
+           // e.currentTarget.previousElementSibling.innerHTML = +multy+1;
         });
     });
     document.querySelectorAll(".dark .counter__inc.minus").forEach(el => {
         el.addEventListener("click", (e) => {
             let multy = e.currentTarget.nextElementSibling.innerHTML;
-            if (+multy < 2){
+            if (+multy < 1){
                 let block = e.currentTarget.parentElement.parentElement.parentElement;
                 if (block.parentElement.classList.contains("basket__card")) {
                     block.parentElement.remove();
@@ -407,10 +415,27 @@ function setBascketCardAction() {
                     block.remove();
                 }
             } else {
-                e.currentTarget.nextElementSibling.innerHTML = +multy-1;
+                //e.currentTarget.nextElementSibling.innerHTML = +multy-1;
             }
         });
     });
+}
+function CloseModalPizza() {
+    document.getElementById("modal-pizza").classList.remove("active");
+    document.body.classList.remove("noscroll");
+    pizzaSelect.classList.add("modal-act");
+    pizzaBtn.innerHTML = `<div class="cart-btn__inc minus" onclick="Dec(this)">&ndash;</div>
+                            <div>1</div>
+                            <div class="cart-btn__inc plus" onclick="Inc(this)">+</div>
+                            <div class="cart-btn__multy">x<span>1</span></div>`;
+}
+function Inc(e) {
+    let inc = e.previousElementSibling.innerHTML;
+    e.previousElementSibling.innerHTML = +inc + 1;
+}
+function Dec(e) {
+    let inc = e.nextElementSibling.innerHTML;
+    if (+inc > 1) {e.nextElementSibling.innerHTML = inc - 1;}
 }
 try {
 

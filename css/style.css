@@ -76,6 +76,8 @@ html,
 body {
     height: 100%;
     background-color: #FCFCFC;
+    background-image: url(../images/bg_tile.jpg);
+    background-position: center;
     overflow-x: hidden;
 }
 body.noscroll {
@@ -953,7 +955,8 @@ body.noscroll {
     font-family: CRRegular4;
     font-weight: 400;
     color:var(--color-dark-grey);
-    border-bottom: 1px dashed var(--color-dark-grey);
+    text-decoration: underline dashed;
+    text-underline-offset: 6px;
     border-radius: 0;
     background-color: #FFFFFF;
     margin-left: 33px;
@@ -962,6 +965,7 @@ body.noscroll {
 }
 .card-pizza__focus_btn.active {
     padding: 1px 8px;
+    text-decoration: none;
     color:var(--color-green);
     border: 1px solid var(--color-green);
     border-radius: 50px;
@@ -973,7 +977,8 @@ body.noscroll {
     font-family: CRRegular4;
     font-weight: 400;
     color:var(--color-dark-grey);
-    border-bottom: 1px dashed var(--color-dark-grey);
+    text-decoration: underline dashed;
+    text-underline-offset: 6px;
     border-radius: 0;
     background-color: #FFFFFF;
     margin-left: 6px;
@@ -982,6 +987,7 @@ body.noscroll {
 }
 .card-pizza__select_btn.active {
     padding: 1px 8px;
+    text-decoration: none;
     color:var(--color-green);
     border: 1px solid var(--color-green);
     border-radius: 50px;
@@ -1344,9 +1350,12 @@ body.noscroll {
     align-items: center;
     justify-content: flex-start;
 }
-.basket__card-column {
+.basket__card-column,
+.basket__card-column-in {
     display: flex;
     flex-direction: column;
+    position: relative;
+    min-height: 100%;
     gap: 5px;
 }
 .basket__card-counter {
@@ -1641,7 +1650,6 @@ body.noscroll {
 }
 .act-repeat .sumbit-btn {
     text-align: center;
-    padding-top: 10px;
 }
 .show-hide__button {
     font-family: CRRegular5;
@@ -2311,8 +2319,13 @@ body.noscroll {
     font-size: 20px;
     font-weight: 400;
     color: #ffffff;
-    width: 155px;
     height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    flex-shrink: 0; 
+    width: 155px;
     background-color: var(--color-green) ;
     border-radius: 40px;
     box-shadow: 0px 10px 20px 0px rgba(81, 184, 81, 0.30);
@@ -2332,9 +2345,13 @@ body.noscroll {
     font-family: CRRegular4;
     font-size: 20px;
     font-weight: 400;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-shrink: 0; 
     color: #ffffff;
     width: 155px;
-    height: 45px;
     background-color: var(--color-light-grey) ;
     border-radius: 40px;
     cursor: pointer;
@@ -2696,9 +2713,11 @@ body.noscroll {
         justify-content: flex-end;
         gap: 30px;
     }
-    .order__accordion-content .basket__card-counter {
+
+    .order__accordion-content .basket__char {
         display: none;
     }
+
     .order__accordion.active .order__accordion-content {
         height: 480px;
       }
@@ -2769,8 +2788,22 @@ body.noscroll {
     .checkout-form {
         max-width: 680px;
     }
-
-
+    .basket__card.ing {
+        min-height: 150px;
+    }
+    .basket__card.ing .basket__price {
+        top: 115px;
+    }
+    .order__accordion-content .multy__total {
+        position: absolute;
+        top: 88px;
+        right: 0px;
+    }
+    .order__accordion-content .basket__card.ing  .multy__total {
+        position: absolute;
+        top: 110px;
+        right: 0px;
+    }
     .basket__card {
         border-radius: 20px;
         height: 130px;
@@ -2782,6 +2815,9 @@ body.noscroll {
     .basket__card.center {
         align-items: flex-start;
     }
+    .basket__card-column-in {
+        gap: 0;
+    }
 
     .basket-absolute {
         display: none;
@@ -2790,6 +2826,9 @@ body.noscroll {
         position: absolute;
         top: 40px;
         left: 93px;
+    }
+    .order__accordion-content .basket__card-counter {
+        position: static;
     }
     .basket__card-counter {
         position: absolute;
@@ -2810,8 +2849,34 @@ body.noscroll {
     .header__container {
         min-width: 300px;
     }
+
+    .menu__main {
+        padding-top: 50px;
+    }
+    .menu__main.margin {
+        padding-top: 90px;
+    }
+    .modal-act .card-pizza_cart-btn:hover {
+        background-color: var(--color-green);
+        background-image: none;
+    }
+    .modal-act .card-pizza_cart-btn .cart-btn__inc {
+        display: block;
+        width: 25px;
+        height: 25px;
+    }
+    .card-pizza .card-pizza_cart-btn.active {
+        border-left: 1px solid var(--color-light-grey);
+        border-right: 1px solid var(--color-light-grey);
+    }
+    .multy__small {
+        width: 15px;
+    }
     .modal-wrapper .card-pizza__top-circle:nth-child(2) {
         right: 56px;
+      }
+      .counter-title {
+        font-size: 11px; 
       }
     .profile__container .reg-complete-block {
         margin: 0 auto;
@@ -3017,6 +3082,9 @@ body.noscroll {
         height: 295px;
         width: 145px;
     }
+    .order__accordion-content .basket__card-counter {
+        position: static;
+    }
     .basket__card-counter {
         position: absolute;
         top: 91px;
@@ -3137,6 +3205,19 @@ body.noscroll {
         width: 128px;
         margin-bottom: 15px;
     }
+    .modal-act .card-pizza_cart-btn {
+        min-width: 76px;
+        background-color: var(--color-green);
+        color: #FFFFFF;
+        border: 1px solid var(--color-green);
+        border-left: 0;
+        border-right: 0;
+        cursor: default;
+        max-width: 86px;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+    }
     .greencard_btn {
         width: 97px;
         height: 32px;
@@ -3159,10 +3240,10 @@ body.noscroll {
     .basket-title {
         font-size: 16px;
     }
+
     .basket__char {
         font-size: 11px;
         line-height: 15px;
-
     }
     .offer__container {
         height: 100%;
