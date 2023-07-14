@@ -33,6 +33,24 @@ navOptions.forEach(el => {
    });
 });
 
+function CloseModalPizza() {
+    document.getElementById("modal-pizza").classList.remove("active");
+    document.body.classList.remove("noscroll");
+    pizzaSelect.classList.add("modal-act");
+    pizzaBtn.innerHTML = `<div class="cart-btn__inc minus" onclick="Dec(this)">&ndash;</div>
+                            <div>1</div>
+                            <div class="cart-btn__inc plus" onclick="Inc(this)">+</div>
+                            <div class="cart-btn__multy">x<span>1</span></div>`;
+}
+function Inc(e) {
+    let inc = e.previousElementSibling.innerHTML;
+    e.previousElementSibling.innerHTML = +inc + 1;
+}
+function Dec(e) {
+    let inc = e.nextElementSibling.innerHTML;
+    if (+inc > 1) {e.nextElementSibling.innerHTML = inc - 1;}
+}
+
 burgerButton.addEventListener("click", ()=>{
     burgerButton.classList.toggle("active");
     if (burgerButton.classList.contains("active")) {
@@ -171,6 +189,7 @@ function setActionsCards() {
     document.querySelectorAll(".card-pizza_cart-btn").forEach(el => {
         el.addEventListener("click", (e) => {
             if (e.target.classList.contains("card-pizza_cart-btn") && !e.currentTarget.parentElement.parentElement.classList.contains("modal-act")){
+                if (e.currentTarget.parentElement.parentElement.classList.contains("card-pizza") && window.matchMedia('(max-width: 750px)').matches) {return;}
                 e.currentTarget.classList.add("active");
                 document.querySelector(".header__basket").classList.remove("empty");
                 document.querySelector(".header__basket-amount").innerHTML = +document.querySelector(".header__basket-amount").innerHTML + 1;
@@ -420,24 +439,7 @@ function setBascketCardAction() {
         });
     });
 }
-function CloseModalPizza() {
-    document.getElementById("modal-pizza").classList.remove("active");
-    document.body.classList.remove("noscroll");
-    pizzaSelect.classList.add("modal-act");
-    pizzaBtn.innerHTML = `<div class="cart-btn__inc minus" onclick="Dec(this)">&ndash;</div>
-                            <div>1</div>
-                            <div class="cart-btn__inc plus" onclick="Inc(this)">+</div>
-                            <div class="cart-btn__multy">x<span>1</span></div>`;
-}
-function Inc(e) {
-    let inc = e.previousElementSibling.innerHTML;
-    e.previousElementSibling.innerHTML = +inc + 1;
-}
-function Dec(e) {
-    let inc = e.nextElementSibling.innerHTML;
-    if (+inc > 1) {e.nextElementSibling.innerHTML = inc - 1;}
-}
-try {
 
+try {
     setBascketCardAction()
 } catch {}
