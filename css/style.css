@@ -965,6 +965,7 @@ body.noscroll {
 .card-pizza__focus_btn.active {
     padding: 1px 8px;
     text-decoration: none;
+    text-underline-offset: none;
     color:var(--color-green);
     border: 1px solid var(--color-green);
     border-radius: 50px;
@@ -986,7 +987,8 @@ body.noscroll {
 }
 .card-pizza__select_btn.active {
     padding: 1px 8px;
-    text-decoration: none;
+    text-decoration: none;    
+    text-underline-offset: none;
     color:var(--color-green);
     border: 1px solid var(--color-green);
     border-radius: 50px;

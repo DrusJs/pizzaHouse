@@ -170,7 +170,7 @@ function setIntervalSlider() {
 function setActionsCards() {
     document.querySelectorAll(".card-pizza_cart-btn").forEach(el => {
         el.addEventListener("click", (e) => {
-            if (e.target.classList.contains("card-pizza_cart-btn") && !e.currentTarget.parentElement.parentElement.classList.contains("modal-act") && !e.currentTarget.classList.contains("modalbtn")){
+            if (e.target.classList.contains("card-pizza_cart-btn") && !e.currentTarget.parentElement.parentElement.classList.contains("modal-act")){
                 e.currentTarget.classList.add("active");
                 document.querySelector(".header__basket").classList.remove("empty");
                 document.querySelector(".header__basket-amount").innerHTML = +document.querySelector(".header__basket-amount").innerHTML + 1;
@@ -421,18 +421,7 @@ function setBascketCardAction() {
         });
     });
 }
-function CloseModalPizza() {
-    pizzaSelect.classList.add("modal-act");
-    pizzaBtn.classList.add("active")
-}
-function Inc(e) {
-    let inc = e.previousElementSibling.innerHTML;
-    e.previousElementSibling.innerHTML = +inc + 1;
-}
-function Dec(e) {
-    let inc = e.nextElementSibling.innerHTML;
-    if (+inc > 1) {e.nextElementSibling.innerHTML = inc - 1;}
-}
+
 try {
 
     setBascketCardAction()
