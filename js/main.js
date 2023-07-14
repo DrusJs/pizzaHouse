@@ -187,8 +187,8 @@ function setActionsCards() {
                 pizzaBtn = e.currentTarget;
                 document.getElementById("modalbtn").classList.remove("active");
                 e.currentTarget.classList.remove("active");
-                return;
-                
+                document.getElementById("modal-mult").innerHTML = 1;
+                return;                
             }
             if (e.target.classList.contains("card-pizza_cart-btn")){
                 e.currentTarget.classList.add("active");
