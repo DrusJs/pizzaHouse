@@ -33,24 +33,6 @@ navOptions.forEach(el => {
    });
 });
 
-function CloseModalPizza() {
-    document.getElementById("modal-pizza").classList.remove("active");
-    document.body.classList.remove("noscroll");
-    pizzaSelect.classList.add("modal-act");
-    pizzaBtn.innerHTML = `<div class="cart-btn__inc minus" onclick="Dec(this)">&ndash;</div>
-                            <div>1</div>
-                            <div class="cart-btn__inc plus" onclick="Inc(this)">+</div>
-                            <div class="cart-btn__multy">x<span>1</span></div>`;
-}
-function Inc(e) {
-    let inc = e.previousElementSibling.innerHTML;
-    e.previousElementSibling.innerHTML = +inc + 1;
-}
-function Dec(e) {
-    let inc = e.nextElementSibling.innerHTML;
-    if (+inc > 1) {e.nextElementSibling.innerHTML = inc - 1;}
-}
-
 burgerButton.addEventListener("click", ()=>{
     burgerButton.classList.toggle("active");
     if (burgerButton.classList.contains("active")) {
@@ -188,8 +170,7 @@ function setIntervalSlider() {
 function setActionsCards() {
     document.querySelectorAll(".card-pizza_cart-btn").forEach(el => {
         el.addEventListener("click", (e) => {
-            if (e.target.classList.contains("card-pizza_cart-btn") && !e.currentTarget.parentElement.parentElement.classList.contains("modal-act")){
-                if (e.currentTarget.parentElement.parentElement.classList.contains("card-pizza") && window.matchMedia('(max-width: 750px)').matches) {return;}
+            if (e.target.classList.contains("card-pizza_cart-btn") && !e.currentTarget.parentElement.parentElement.classList.contains("modal-act") && !e.currentTarget.classList.contains("modalbtn")){
                 e.currentTarget.classList.add("active");
                 document.querySelector(".header__basket").classList.remove("empty");
                 document.querySelector(".header__basket-amount").innerHTML = +document.querySelector(".header__basket-amount").innerHTML + 1;
@@ -198,7 +179,7 @@ function setActionsCards() {
     });
     document.querySelectorAll(".card-pizza .card-pizza_cart-btn").forEach(el => {
         el.addEventListener("click", (e) => {
-            if (window.matchMedia('(max-width: 750px)').matches && !e.currentTarget.parentElement.parentElement.classList.contains("modal-act")) {
+            if (window.matchMedia('(max-width: 750px)').matches && !e.currentTarget.parentElement.parentElement.classList.contains("modal-act") && e.target.classList.contains("card-pizza_cart-btn")) {
                 document.getElementById("modal-pizza").classList.add("active");
                 document.body.classList.add("noscroll");
                 pizzaSelect = ""; pizzaBtn = "";
@@ -209,7 +190,7 @@ function setActionsCards() {
                 return;
                 
             }
-            if (e.target.classList.contains("card-pizza_cart-btn") && !e.currentTarget.parentElement.parentElement.classList.contains("modal-act")){
+            if (e.target.classList.contains("card-pizza_cart-btn")){
                 e.currentTarget.classList.add("active");
                 document.querySelector(".header__basket").classList.remove("empty");
                 document.querySelector(".header__basket-amount").innerHTML = +document.querySelector(".header__basket-amount").innerHTML + 1;
@@ -228,6 +209,7 @@ function setActionsCards() {
             if (+multy < 2){
                 let cart = +document.querySelector(".header__basket-amount").innerHTML;
                 e.currentTarget.parentElement.classList.remove("active");
+                e.currentTarget.parentElement.parentElement.parentElement.classList.remove("modal-act");
                 document.querySelector(".header__basket-amount").innerHTML = cart - 1;
                 if (+document.querySelector(".header__basket-amount").innerHTML < 1) {
                     document.querySelector(".header__basket").classList.add("empty");
@@ -439,7 +421,19 @@ function setBascketCardAction() {
         });
     });
 }
-
+function CloseModalPizza() {
+    pizzaSelect.classList.add("modal-act");
+    pizzaBtn.classList.add("active")
+}
+function Inc(e) {
+    let inc = e.previousElementSibling.innerHTML;
+    e.previousElementSibling.innerHTML = +inc + 1;
+}
+function Dec(e) {
+    let inc = e.nextElementSibling.innerHTML;
+    if (+inc > 1) {e.nextElementSibling.innerHTML = inc - 1;}
+}
 try {
+
     setBascketCardAction()
 } catch {}

@@ -570,7 +570,6 @@ body.noscroll {
     transform: translate(-1600px,0px);
     opacity: 0;
     transition: 600ms;
-    background-color: #FCFCFC;
     scroll-snap-stop: always;
 }
 
@@ -2348,6 +2347,7 @@ body.noscroll {
     height: 45px;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 5px;
     flex-shrink: 0; 
     color: #ffffff;
@@ -2529,10 +2529,6 @@ body.noscroll {
     .menu__main.start {
         justify-content: center;
       }
-      .menu__novelty .pagination__arrow-prev,
-      .menu__novelty .pagination__arrow-next {
-        display: none;
-      }
     .header__basket {
         font-size: 0px;
         width: 48px;
@@ -2593,6 +2589,10 @@ body.noscroll {
     .novelty-slider::-webkit-scrollbar { 
         width: 0;
         background: rgba(255, 255, 255, 0.0);
+    }
+    .pagination__arrow-prev,
+    .pagination__arrow-next {
+        display: none;
     }
     .novelty-slide {
         position: relative;
@@ -2796,12 +2796,12 @@ body.noscroll {
     }
     .order__accordion-content .multy__total {
         position: absolute;
-        top: 88px;
+        top: 90px;
         right: 0px;
     }
     .order__accordion-content .basket__card.ing  .multy__total {
         position: absolute;
-        top: 110px;
+        top: 115px;
         right: 0px;
     }
     .basket__card {
@@ -2829,6 +2829,10 @@ body.noscroll {
     }
     .order__accordion-content .basket__card-counter {
         position: static;
+        align-items: flex-end;
+    }
+    .order__accordion-content .basket__card-counter .counter-title {
+        padding-bottom: 2px;
     }
     .basket__card-counter {
         position: absolute;
@@ -2856,18 +2860,18 @@ body.noscroll {
     .menu__main.margin {
         padding-top: 90px;
     }
-    .modal-act .card-pizza_cart-btn:hover {
-        background-color: var(--color-green);
-        background-image: none;
-    }
+
     .modal-act .card-pizza_cart-btn .cart-btn__inc {
-        display: block;
         width: 25px;
         height: 25px;
+    }
+    .modal-act .card-pizza_cart-btn:hover {
+        border: 1px solid var(--color-light-grey);
     }
     .card-pizza .card-pizza_cart-btn.active {
         border-left: 1px solid var(--color-light-grey);
         border-right: 1px solid var(--color-light-grey);
+        padding: 0;
     }
     .multy__small {
         width: 15px;
@@ -3084,6 +3088,10 @@ body.noscroll {
     }
     .order__accordion-content .basket__card-counter {
         position: static;
+        align-items: flex-end;
+    }
+    .order__accordion-content .basket__card-counter .counter-title {
+        padding-bottom: 2px;
     }
     .basket__card-counter {
         position: absolute;
@@ -3133,50 +3141,27 @@ body.noscroll {
     }
     .card-pizza .card-pizza_cart-btn {
         font-family: CRRegular4;
-        height: 26px;
+        height: 25px;
         min-width: 66px;
         padding: 3px 10px 2px 10px;
         font-size: 16px;
         border-radius: 50px;
     }
     .card-pizza .card-pizza_cart-btn.active {
-        height: 26px;
-        min-width: 66px;
-        max-width: 66px;
-        padding: 3px 10px 2px 10px;
+        height: 25px;
+        min-width: 100px;
+        max-width: 100px;
         font-size: 16px;
-        border-radius: 50px;
-        font-family: CRRegular4;
-        padding: 3px 10px 2px 10px;
-        color: var(--color-dark-grey);
-        font-size: 23px;
-        background-color: #FFFFFF;
         margin-left: 0;
-        font-size: 16px;
     }
     .card-pizza .card-pizza_cart-btn.item-card__btn.active:hover {
-        height: 26px;
-        min-width: 66px;
-        max-width: 66px;
-        padding: 3px 10px 2px 10px;
-        font-size: 16px;
-        border-radius: 50px;
-        font-family: CRRegular4;
-        padding: 3px 10px 2px 10px;
-        color: var(--color-dark-grey);
-        font-size: 23px;
-        background-color: #FFFFFF;
+        height: 25px;
+        min-width: 100px;
+        max-width: 100px;
         margin-left: 0;
         font-size: 16px;
-        border-left: 0;
-        border-right: 0;
     }
-    .card-pizza .card-pizza_cart-btn.active .cart-btn__inc {
-        display: none;
-    }
-    .card-pizza .card-pizza_cart-btn.active .cart-btn__multy {
-        display: none;
-    }
+
     .greencard__container {
         height: 295px;
         width: 145px;
@@ -3206,17 +3191,7 @@ body.noscroll {
         margin-bottom: 15px;
     }
     .modal-act .card-pizza_cart-btn {
-        min-width: 76px;
-        background-color: var(--color-green);
-        color: #FFFFFF;
-        border: 1px solid var(--color-green);
-        border-left: 0;
-        border-right: 0;
-        cursor: default;
-        max-width: 86px;
-        padding: 0;
         display: flex;
-        justify-content: space-between;
     }
     .greencard_btn {
         width: 97px;
