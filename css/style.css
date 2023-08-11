@@ -1335,10 +1335,9 @@ body.noscroll {
 }
 .basket__card {
     width: 100%;
-    height: 170px;
     background-color: #FFFFFF;
     border-radius: 50px;
-    padding: 12px 40px 12px 14px;
+    padding: 12px 40px 50px 14px;
     box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.15);
     display: flex;
     white-space: nowrap;
@@ -1346,6 +1345,26 @@ body.noscroll {
 }
 .basket__card-img {
     margin-right: 21px;
+    object-fit: contain;
+    align-self: flex-start;
+    border-radius: 41px;
+}
+.basket__card-img-constructor {
+    width: 145px;
+    height: 145px;
+    margin-right: 21px;
+}
+.basket__card-img-constructor .basket__card-img {
+    width: 72px;
+    height: 145px;
+    object-fit: cover;
+    margin-right: 0;
+}
+.basket__card-img-constructor .basket__card-img:first-child {
+    object-position: left center;
+}
+.basket__card-img-constructor .basket__card-img:last-child {
+    object-position: right center;
 }
 .basket__card.center {
     align-items: center;
@@ -1573,7 +1592,75 @@ body.noscroll {
 }
 .margin-left {
     margin-left: 355px;
-  }
+}
+.delivery__city-block {
+    margin-top: 71px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px 60px;
+    max-width: 938px;
+}
+
+.delivery-title {
+    font-size: 23px;
+    color: var(--color-dark-grey);
+    display: flex;
+    align-items: center;
+}
+.delivery-title img{
+    margin-right: 14px;
+}
+.delivery-adress {
+    margin-top: -3px;
+}
+.delivery-link {
+    margin-top: 5px;
+}
+.delivery-time {
+    margin-top: 15px;
+}
+.delivery-phone {
+    margin-top: 10px;
+}
+.delivery-adress,
+.delivery-link,
+.delivery-time,
+.delivery-phone {
+    font-family: CRRegular5;
+    font-size: 20px;
+    line-height: 30px;
+    display: flex;
+    margin-left: 50px;
+    align-items: center;
+}
+.delivery-time,
+.delivery-phone {
+    margin-left: 20px;
+}
+.delivery-link {
+    color: #51B851;
+    text-decoration: none;
+}
+.delivery-time::before {
+    content: "";
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    margin-right: 7px;
+    background-image: url(../images/headerTimeIcon.svg);
+    background-size: contain;
+    background-position: center center;
+}
+.delivery-phone::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background-image: url(../images/delivery-phone.svg);
+    background-size: contain;
+    background-position: center center;
+}
 /**************************************/
 /***********profile.html***************/
 .profile-nav {
@@ -1682,8 +1769,8 @@ body.noscroll {
     gap: 20px;
 }
 .order__accordion.active .order__accordion-content{
-    height: 600px;
-    opacity: 1;    
+    opacity: 1;
+    height: initial;
     padding: 20px 0;
 }
 .multy__small {
@@ -2715,14 +2802,16 @@ body.noscroll {
         justify-content: flex-end;
         gap: 30px;
     }
-
+    .delivery__city-block {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .delivery-container {
+        justify-self: center;
+    }
     .order__accordion-content .basket__char {
         display: none;
     }
 
-    .order__accordion.active .order__accordion-content {
-        height: 480px;
-      }
     .profile__container .reg-complete-block {
         margin-left: 200px;
     }
@@ -2794,24 +2883,33 @@ body.noscroll {
         min-height: 150px;
     }
     .basket__card.ing .basket__price {
-        top: 115px;
+        bottom: 10px;
     }
     .order__accordion-content .multy__total {
         position: absolute;
-        top: 90px;
+        bottom: 10px;
         right: 0px;
     }
     .order__accordion-content .basket__card.ing  .multy__total {
         position: absolute;
-        top: 115px;
+        bottom: 10px;
         right: 0px;
     }
     .basket__card {
         border-radius: 20px;
-        height: 130px;
+        padding: 12px 40px 50px 14px;
     }
     .basket__card-img {
         width: 68px;
+        height: 68px;
+        border-radius: 10px;
+    }
+    .basket__card-img-constructor {
+        width: 68px;
+        height: 68px;
+    }
+    .basket__card-img-constructor .basket__card-img {
+        width: 34px;
         height: 68px;
     }
     .basket__card.center {
@@ -2822,7 +2920,7 @@ body.noscroll {
     }
 
     .basket-absolute {
-        display: none;
+        margin-top: 50px;
     }
     .basket__char {
         position: absolute;
@@ -2836,14 +2934,18 @@ body.noscroll {
     .order__accordion-content .basket__card-counter .counter-title {
         padding-bottom: 2px;
     }
+    .basket-absolute  .basket__card-counter {
+        position: static;
+        margin-left: -80px;
+    }
     .basket__card-counter {
         position: absolute;
-        top: 85px;
-        left: 190px;
+        bottom: 10px;
+        right: 30px;
     }
     .basket__price {
         position: absolute;
-        top: 90px;
+        bottom: 10px;
         left: 93px;
     }
     .checkout__container .reg-complete-block, .account .reg-complete-block {
@@ -2854,6 +2956,9 @@ body.noscroll {
 @media screen and (max-width: 750px) {
     .header__container {
         min-width: 300px;
+    }
+    .delivery__city-block {
+        grid-template-columns: repeat(1, 1fr);       
     }
 
     .menu__main {
@@ -3095,10 +3200,13 @@ body.noscroll {
     .order__accordion-content .basket__card-counter .counter-title {
         padding-bottom: 2px;
     }
+    .basket-absolute  .basket__card-counter {
+        position: static;
+    }
     .basket__card-counter {
         position: absolute;
-        top: 91px;
-        left: 180px;
+        bottom: 10px;
+        right: 30px;
     }
     .card-pizza .card-pizza__img {
         left: 3px;
